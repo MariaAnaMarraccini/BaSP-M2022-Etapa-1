@@ -1,15 +1,15 @@
-#HTML of the Trackgenix page.
+# HTML of the Trackgenix page.
 
 My name is Maria Ana Marraccini. The following proyect intends to be the basic HTML structure of the landing page of
 "Trackgenix". This landing page was previously designed in the "Figma" platform.
 
-##Structure of the repository.
+## Structure of the repository.
 
 This proyect was saved in the main folder "BaSP-M2022-Etapa-1". Inside this folder, another named "Semana-01" was
 saved. It was in this last folder where the index.html file was made. The folder also contains an "img" folder,
 used for the saving of the images and icons of the HTML structure.
 
-##Structure of the HTML file.
+## Structure of the HTML file.
 
 "HTML:5" basic structure was first placed in this proyect. Then, inside of the "body" section,
 the header was settled with the first and only "h1" label: The title "Trackgenix". After this,
