@@ -3,6 +3,11 @@
 My name is Maria Ana Marraccini. The following proyect intends to be the basic HTML structure of the landing page of
 "Trackgenix". This landing page was previously designed in the "Figma" platform.
 
+## The system Trackgenix.
+
+The following is a web system created for Trackgenix SA, which is important to make it easy for the Human Resources
+Department to administrate the work of the employees, organised in proyects and teams.
+
 ## Structure of the repository.
 
 This proyect was saved in the main folder "BaSP-M2022-Etapa-1". Inside this folder, another named "Semana-01" was
