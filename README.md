@@ -19,7 +19,7 @@ used for the saving of the images and icons of the HTML structure.
 "HTML:5" basic structure was first placed in this proyect. Then, inside of the "body" section,
 the header was settled with the first and only "h1" label: The title "Trackgenix". After this,
 the "nav" was made. This is were the sidebar menu was placed. A form with a "search" button, a "log in" and "sign up"
-button were also made. Other options (positioned in an unordered list) with the redirection of the user
+button was also made. Other options (positioned in an unordered list) with the redirection of the user
 to other section of the same page were also settled. I used the "p" label here for "MENU" and "GET IN TOUCH",
 because I just made the header with the "h1" label. Therefore, I couldn't use yet the "h2" label, much less other "h"
 labels (h4 would be the more suitable in this case).
