@@ -1,3 +1,5 @@
+### Week 02.
+
 # HTML of the Trackgenix page.
 
 My name is Maria Ana Marraccini. The following proyect intends to be the basic HTML structure of the landing page of
@@ -29,3 +31,5 @@ The following section was "Features" with the making of another unordered list. 
 section with more images, buttons and paragraphs was collocated. Here I started to use "h3" labels.
 The "contact-us" was the next section. Here a "form" with "label", "input", "select" and "textarea" was
 made. Finally, the "footer" was finished with some "h4" labels and ordered lists.
+
+### Week 03
