@@ -1,0 +1,22 @@
+h1 {
+    position: relative;
+    height: 117.55px;
+    width: 1023.65px;
+    margin-right: 49.35px;
+    margin-left: 62.46px;
+    margin-bottom: 3%;
+    margin-top: 73.45px; 
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-color:#373867;
+    font-family: 'Roboto';
+    font-size: 70px; 
+    font-weight: bold;
+    color:#373867;  
+    float: right;
+}
+
+nav {
+    position: relative;
+    float: left;
+}
