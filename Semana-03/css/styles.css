@@ -6,6 +6,7 @@ h1 {
     margin-left: 62.46px;
     margin-bottom: 3%;
     margin-top: 73.45px; 
+    float: right;
     border-bottom-style: solid;
     border-width: 3px;
     border-color:#373867;
@@ -13,10 +14,41 @@ h1 {
     font-size: 70px; 
     font-weight: bold;
     color:#373867;  
-    float: right;
+    
+}
+
+header {
+        position: relative; 
+        float: right;
+        border: 1px solid black;
+        width: 80%;
 }
 
 nav {
     position: relative;
+    padding-top: 35.22px;
     float: left;
+    border: 1px solid black;
+    width: 19%;
+    height: 100%;
+    background-color: #B1B2B6;
+}
+
+footer {
+        position: relative;
+        float: right;
+        width: 80%;
+}
+
+.main {
+        position: relative;
+        float: right;
+        width: 80%;
+        border: 1px solid black;
+
+}
+
+.image {
+    width: 515px;
+    height: 315px;
 }
