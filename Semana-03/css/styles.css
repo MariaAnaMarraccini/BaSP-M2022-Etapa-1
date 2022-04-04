@@ -126,6 +126,21 @@ footer  {
   width: 80%;
   border: 1px solid black;
 }
+.title  {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: #49A37B;
+}
+.info-p {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  text-align: justify;
+  font-style: normal;
+  color: #373867CC;
+}
 .info-left  {
   position: relative;
   padding: 2%;
@@ -143,6 +158,10 @@ footer  {
   width: 48%;
   float: right;
 }
+.size-image-one {
+  width: 513.39px;
+  height: 312.71px;
+}
 .info-right  {
   position: relative;
   width: 48%;
@@ -153,16 +172,14 @@ footer  {
   width: 48%;
   float: left;
 }
+.size-image-two {
+  width: 434.71px;
+  height: 215.78px;
+}
 .features-content {
   position: relative;
   width: 100%;
   align-items: center;
 }
-.title  {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  color: #49A37B;
-}
+
 
