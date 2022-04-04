@@ -32,7 +32,8 @@ nav {
   border: 1px solid black;
   width: 15%;
   height: 100%;
-  background-color: #B1B2B6;
+  background-color: #B1B2B6; 
+  opacity: 0.9;
 }
 
 footer  {
@@ -40,28 +41,23 @@ footer  {
   float: right;
   width: 80%;
 }
-
-a {
-  text-decoration: none;
-}
-
 .main {
   position: relative;
   float: right;
   width: 80%;
   border: 1px solid black;
 }
-
 .image  {
   width: 515px;
   height: 315px;
 }
-
+a {
+  text-decoration: none;
+}
 .container-search {
   width: 100px;
   position: relative;
 }
-
 .container-search input#search  {
   width: 200px;
   height: 25px;
@@ -77,12 +73,12 @@ a {
   top: 50%;
   margin-left: -30px;
   margin-top: 5px;
-  color: #4f5b66;
+  color: #B1B2B6;
 }
 
 .container-search button  {
   border: 0px;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 .buttons-account  {
   width: 91.96px;
@@ -92,6 +88,39 @@ a {
   border: none;
 }
 
-.log-in {
+#log-in {
+  background-color: #49A37B; 
+}
 
+#sign-up  {
+  background-color: #373867;
+}
+.buttons-account a  {
+  color: #FFFFFF;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-size: 11.99px;
+}
+.menu {
+  margin-top: 37.71px;
+  padding-bottom: 6px;
+  border-bottom-style: solid;
+  border-width: 1.5px;
+  border-color: #49A37B;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 15px;
+  color: #373867;
+}
+.sub-menu {
+  margin-top: 24px;
+}
+
+.sub-menu li  {
+  margin-top: 7px;
+}
+.sub-menu li a  {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #373867;
 }
