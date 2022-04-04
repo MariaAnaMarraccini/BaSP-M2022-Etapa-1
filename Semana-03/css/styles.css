@@ -33,23 +33,7 @@ nav {
   width: 15%;
   height: 100%;
   background-color: #B1B2B6; 
-  opacity: 0.9;
-}
-
-footer  {
-  position: relative;
-  float: right;
-  width: 80%;
-}
-.main {
-  position: relative;
-  float: right;
-  width: 80%;
-  border: 1px solid black;
-}
-.image  {
-  width: 515px;
-  height: 315px;
+  opacity: 1;
 }
 a {
   text-decoration: none;
@@ -67,7 +51,6 @@ a {
   border: none;
   border-radius: 3px;
   }
-
 .container-search .icon  {
   position: absolute;
   top: 50%;
@@ -87,11 +70,9 @@ a {
   border-radius: 11.24px;
   border: none;
 }
-
 #log-in {
   background-color: #49A37B; 
 }
-
 #sign-up  {
   background-color: #373867;
 }
@@ -115,12 +96,62 @@ a {
 .sub-menu {
   margin-top: 24px;
 }
-
 .sub-menu li  {
   margin-top: 7px;
 }
 .sub-menu li a  {
   font-family: 'Roboto';
+  font-style: normal;
   font-size: 15px;
   color: #373867;
 }
+.get-in-touch {
+  margin-top: 270.55px;
+}
+.more-data li{
+  margin-top: 12px;
+  font-style: normal;
+  font-size: 15px;
+  font-family: 'Roboto';
+  color: #373867;
+}
+footer  {
+  position: relative;
+  float: right;
+  width: 80%;
+}
+.main {
+  position: relative;
+  float: right;
+  width: 80%;
+  border: 1px solid black;
+}
+.image  {
+  width: 515px;
+  height: 315px;
+}
+.info-left  {
+  position: relative;
+  width: 48%;
+  float: left;
+}
+.first-image  {
+  position: relative;
+  width: 48%;
+  float: right;
+}
+.info-right  {
+  position: relative;
+  width: 48%;
+  float: right;
+}
+.second-image {
+  position: relative;
+  width: 48%;
+  float: left;
+}
+.features-content {
+  width: 100%;
+}
+
+
