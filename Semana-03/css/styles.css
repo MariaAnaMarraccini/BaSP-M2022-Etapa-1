@@ -1,3 +1,9 @@
+header  {
+  position: relative; 
+  float: right;
+  border: 1px solid black;
+  width: 80%;
+}
 h1  { 
   position: relative;
   height: 117.55px;
@@ -15,14 +21,6 @@ h1  {
   font-weight: bold;
   color:#373867;  
 }
-
-header  {
-  position: relative; 
-  float: right;
-  border: 1px solid black;
-  width: 80%;
-}
-
 nav {
   position: relative;
   padding-top: 35.22px;
@@ -33,7 +31,7 @@ nav {
   width: 15%;
   height: 100%;
   background-color: #B1B2B6; 
-  opacity: 1;
+  opacity: 0.9;
 }
 a {
   text-decoration: none;
@@ -86,11 +84,12 @@ a {
   margin-top: 37.71px;
   padding-bottom: 6px;
   border-bottom-style: solid;
-  border-width: 1.5px;
+  border-width: 1.5;
   border-color: #49A37B;
   font-family: 'Roboto';
   font-style: normal;
   font-size: 15px;
+  font-weight: 400;
   color: #373867;
 }
 .sub-menu {
@@ -113,6 +112,7 @@ a {
   font-style: normal;
   font-size: 15px;
   font-family: 'Roboto';
+  font-weight: 400;
   color: #373867;
 }
 footer  {
@@ -126,16 +126,19 @@ footer  {
   width: 80%;
   border: 1px solid black;
 }
-.image  {
-  width: 515px;
-  height: 315px;
-}
 .info-left  {
   position: relative;
+  padding: 2%;
   width: 48%;
   float: left;
 }
-.first-image  {
+.image  {
+  width: 515px;
+  height: 315px;
+  border: 0.7px solid #373867;
+  border-radius: 17px;
+}
+.image .first-image  {
   position: relative;
   width: 48%;
   float: right;
@@ -145,13 +148,21 @@ footer  {
   width: 48%;
   float: right;
 }
-.second-image {
+.image .second-image {
   position: relative;
   width: 48%;
   float: left;
 }
 .features-content {
+  position: relative;
   width: 100%;
+  align-items: center;
 }
-
+.title  {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: #49A37B;
+}
 
