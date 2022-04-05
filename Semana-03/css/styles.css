@@ -23,6 +23,8 @@ h1  {
 }
 nav {
   position: relative;
+  /*position: fixed;*/
+  padding-bottom: 10%;
   padding-top: 35.22px;
   padding-left: 30px;
   padding-right: 30px;
@@ -175,7 +177,6 @@ a {
   width: 48%;
   margin-right: 65px;
   float: right;
-  border: 1px black solid;
 }
 .second-image {
   position: relative;
@@ -203,6 +204,15 @@ a {
   color: #373867;
   background-color:#AACE9B;
 }
+.titles-content {
+  padding-bottom: 14px;
+  margin-right: 49px;
+  margin-left: 60px;
+  border-bottom-style: solid;
+  border-color: #373867;
+  border-width: 3.8px;
+
+}
 .features-content {
   position: relative;
   width: 100%;
@@ -212,8 +222,23 @@ a {
 #contact-us {
   margin-top: 2%;
 }
+label,input,textarea,select {
+  display: block;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+#contact-send {
+  position: relative;
+  float: left;
+}
+#contact-reset {
+  position: relative;
+  float: right;
+}
 footer  {
   position: relative;
   float: right;
   width: 80%;
 }
+
+
