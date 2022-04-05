@@ -12,7 +12,7 @@ Department to administrate the work of the employees, organised in projects and 
 
 ## Structure of the repository.
 
-This project was saved in the main folder "BaSP-M2022-Etapa-1". Inside this folder, another named "Semana-01" was
+This project was saved in the main folder "BaSP-M2022-Etapa-1". Inside this folder, another named "Semana-02" was
 saved. It was in this last folder where the index.html file was made. The folder also contains an "img" folder,
 used for the saving of the images and icons of the HTML structure.
 
@@ -33,3 +33,17 @@ The "contact-us" was the next section. Here a "form" with "label", "input", "sel
 made. Finally, the "footer" was finished with some "h4" labels and ordered lists.
 
 ### Week 03
+
+## CSS of Trackgenix
+
+The following file intends to be the CSS design of "Trackgenix", taken from the Figma platform.
+
+## Structure of the repository. 
+
+This project was saved in the folder "Semana-03", next to "Semana-02" (HTML structure). In order to enter, the
+folder Semana-03 must be opened in the browser. Secondly, the file "index.html" of that folder (not the one 
+from "Semana-02") has to be clicked. After this, the file "styles" clicked to in order to access to the 
+entire project. There the "reset" file and a folder named "img" below CSS (which contains all the images of
+the project) can be found.
+
+## Structure of the CSS file.

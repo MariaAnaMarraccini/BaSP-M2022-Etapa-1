@@ -324,6 +324,7 @@ label {
 }
 label,input,textarea,select {
   display: block;
+  margin-left: 60px;
 }
 #name, #email, #option, #message  {
   height: 37px;
@@ -343,11 +344,35 @@ label,input,textarea,select {
 }
 #contact-send {
   position: relative;
+  height: 45px;
+  width: 200px;
+  margin-top: 34px;
+  margin-bottom:85px;
   float: left;
+  border: none;
+  border-radius:5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: #373867CC;
+  background-color: #AACE9B; 
 }
 #contact-reset {
   position: relative;
-  float: right;
+  height: 45px;
+  width: 110px;
+  margin-top: 34px;
+  float: left;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: #373867CC;
+  background-color:#DADADA;
+
 }
 footer  {
   position: relative;
