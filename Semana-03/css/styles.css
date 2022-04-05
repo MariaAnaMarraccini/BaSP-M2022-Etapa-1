@@ -251,7 +251,7 @@ a {
   height: 300px;
   margin-left: 100px;
   margin-bottom: 40px;
-  padding-bottom: 14px;
+  margin-top: 40px;
   margin-right: 49px;
   margin-left: 60px;
   border-bottom-style: solid;
@@ -271,14 +271,14 @@ a {
 .image-left-one {
   position: relative;
   width: 48%;
-  margin-top: 43px;
+  
   float: left;
 }
 .content-right-one {
   position: relative;
   width: 40%;
-  margin-top: 40px;
-  padding-right: 100px;
+
+
   float: right;
 }
 .image-right-two {
@@ -290,7 +290,6 @@ a {
 .content-left-two {
   position: relative;
   width: 40%;
-  margin-top: 40px;
   padding-right: 100px;
   float: right;
 }
@@ -298,6 +297,7 @@ a {
   position: relative; 
   width: 110px; 
   height: 34px;
+  margin-top: 10px;
   margin-left: 140px;
   background-color: #AACE9B;
   border: 0px;
@@ -314,10 +314,32 @@ a {
 #contact-us {
   width: 100%;
 }
+label {
+  margin-top: 50px;
+  font-family:'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #373867;
+}
 label,input,textarea,select {
   display: block;
-  margin-top: 1%;
-  margin-bottom: 1%;
+}
+#name, #email, #option, #message  {
+  height: 37px;
+  width: 360px;
+  margin-top: 10px;
+  border: 1px solid #373867;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color:#373867;
+}
+#message  {
+  width: 450px;
+  height: 200px;
 }
 #contact-send {
   position: relative;
