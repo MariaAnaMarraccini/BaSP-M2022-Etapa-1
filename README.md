@@ -34,7 +34,7 @@ made. Finally, the "footer" was finished with some "h4" labels and ordered lists
 
 ### Week 03
 
-## CSS of Trackgenix.
+# CSS of Trackgenix.
 
 The following file intends to be the CSS design of "Trackgenix", taken from the Figma platform. This design
 doesn't intend to be responsive, but tries to respect the 1440x1024 measure.
