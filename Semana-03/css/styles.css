@@ -1,5 +1,5 @@
 header  {
-  position: relative; 
+  position: relative;
   float: right;
   width: 80%;
 }
@@ -10,51 +10,51 @@ h1  {
   margin-right: 49.35px;
   margin-left: 62.46px;
   margin-bottom: 3%;
-  margin-top: 73.45px; 
-  float: right;
+  margin-top: 73.45px;
   border-bottom-style: solid;
   border-width: 3px;
   border-color:#373867;
   font-family: 'Roboto';
   font-size: 70px; 
   font-weight: bold;
-  color:#373867;  
+  color:#373867;
+  float: right;
 }
-nav {
+nav  {
   position: fixed;
   width: 15%;
   height: 100%;
   margin-right: 0px;
-  align-items: stretch;
   padding-bottom: 10%;
   padding-top: 35.22px;
   padding-left: 30px;
   padding-right: 30px;
+  background-color: #B1B2B6;
   float: left;
-  background-color: #B1B2B6; 
+  align-items: stretch;
   opacity: 0.9;
 }
-a {
+a  {
   text-decoration: none;
 }
-.container-search {
-  width: 100px;
+.container-search  {
   position: relative;
+  width: 100px;
 }
 .container-search input#search  {
   width: 200px;
   height: 25px;
-  font-size: 10pt;
-  float: left;
   padding-left: 5px;
   border: none;
   border-radius: 3px;
-  }
+  font-size: 10pt;
+  float: left;
+}
 .container-search .icon  {
   position: absolute;
-  top: 50%;
   margin-left: -30px;
   margin-top: 5px;
+  top: 50%;
   color: #B1B2B6;
 }
 .container-search button  {
@@ -65,22 +65,22 @@ a {
   width: 91.96px;
   height: 34.99px;
   margin-top: 27.73px;
-  border-radius: 11.24px;
   border: none;
+  border-radius: 11.24px;
 }
-#log-in {
-  background-color: #49A37B; 
+.buttons-account a  {
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-size: 11.99px;
+  color: #FFFFFF;
+}
+#log-in  {
+  background-color: #49A37B;
 }
 #sign-up  {
   background-color: #373867;
 }
-.buttons-account a  {
-  color: #FFFFFF;
-  font-family: 'Roboto';
-  font-weight: normal;
-  font-size: 11.99px;
-}
-.menu {
+.menu  {
   margin-top: 37.71px;
   padding-bottom: 6px;
   border-bottom: solid;
@@ -92,7 +92,7 @@ a {
   font-weight: 400;
   color: #373867;
 }
-.sub-menu {
+.sub-menu  {
   margin-top: 24px;
 }
 .sub-menu li  {
@@ -104,10 +104,10 @@ a {
   font-size: 15px;
   color: #373867;
 }
-.get-in-touch {
+.get-in-touch  {
   margin-top: 200px;
 }
-.more-data li{
+.more-data li  {
   margin-top: 12px;
   font-style: normal;
   font-size: 15px;
@@ -115,26 +115,26 @@ a {
   font-weight: 400;
   color: #373867;
 }
-.main {
+.main  {
   position: relative;
-  float: right;
   width: 80%;
+  float: right;
 }
 .first-contain  {
   margin-bottom: 125px;
 }
-.info-contain {
+.info-contain  {
   margin-bottom: 100px;
 }
 .title  {
+  margin-bottom: 19px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   color: #49A37B;
-  margin-bottom: 19px;
 }
-.info-p {
+.info-p  {
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 16px;
@@ -164,7 +164,7 @@ a {
   margin-top: 11px;
   float: right;
 }
-.size-image-one {
+.size-image-one  {
   width: 513.39px;
   height: 312.71px;
 }
@@ -174,33 +174,31 @@ a {
   margin-right: 65px;
   float: right;
 }
-.second-image {
+.second-image  {
   position: relative;
   width: 40%;
   margin-right: 80px;
   margin-left: 40px;
   margin-top: 79px;
 }
-.size-image-two {
+.size-image-two  {
   width: 400px;
   height: 200px;
 }
-#first-learn-button {
+#first-learn-button  {
   width: 82px;
   height: 26px;
   margin-top: 13px;
   border: none;
-  border-radius: 4px;
-  color: #373867;
   background-color:#AACE9B;
-}
-#first-learn-button {
+  border-radius: 4px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 9px;
+  color: #373867;
 }
-.titles-content {
+.titles-content  {
   padding-bottom: 14px;
   margin-right: 49px;
   margin-left: 60px;
@@ -213,12 +211,12 @@ a {
   font-size: 30px;
   color: #373867;
 }
-.features-content {
+.features-content  {
   position: relative;
   width: 100%;
   align-items: center;
 }
-.feature-p{
+.feature-p  {
   margin-right: 49px;
   margin-left: 60px;
   margin-top: 27px;
@@ -233,10 +231,10 @@ a {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
+  color: #373867;
   list-style: disc;
-  color: #373867; 
 }
-#item {
+#item  {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -261,60 +259,55 @@ a {
   font-style: normal;
   font-weight: 700;
   font-size: 200;
-  line-height: 20px; 
+  line-height: 20px;
   text-align: center;
   color: #373867;
 }
-.image-left-one {
+.image-left-one  {
   position: relative;
   width: 48%;
-  
   float: left;
 }
-.content-right-one {
+.content-right-one  {
   position: relative;
   width: 40%;
-
-
   float: right;
 }
-.image-right-two {
+.image-right-two  {
   position: relative;
   width: 48%;
   float: right;
-  
 }
-.content-left-two {
+.content-left-two  {
   position: relative;
   width: 40%;
   padding-right: 100px;
   float: right;
 }
-.learn-more-buttons {
-  position: relative; 
-  width: 110px; 
+.learn-more-buttons  {
+  position: relative;
+  width: 110px;
   height: 34px;
   margin-top: 10px;
   margin-left: 140px;
   background-color: #AACE9B;
   border: 0px;
   border-radius: 5px;
-
 }
-.learn-more-buttons a{
+.learn-more-buttons a  {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   color: #373867;
 }
-#contact-us {
+#contact-us  {
   width: 100%;
 }
-.contact-form {
+.contact-form  {
   margin-left: 60px;
 }
-label {
+label  {
   margin-top: 50px;
   font-family:'Roboto';
   font-style: normal;
@@ -322,7 +315,7 @@ label {
   font-size: 14px;
   color: #373867;
 }
-label,input,textarea,select {
+label,input,textarea,select  {
   display: block;
 }
 #name, #email, #option, #message  {
@@ -341,14 +334,14 @@ label,input,textarea,select {
   width: 450px;
   height: 200px;
 }
-#contact-send {
+#contact-send  {
   position: relative;
   height: 45px;
   width: 200px;
   margin-top: 34px;
   margin-bottom:85px;
   margin-right: 30px;
-  float: left;
+  background-color: #AACE9B;
   border: none;
   border-radius:5px;
   font-family: 'Roboto';
@@ -356,14 +349,14 @@ label,input,textarea,select {
   font-weight: 500;
   font-size: 15px;
   color: #373867CC;
-  background-color: #AACE9B; 
+  float: left;
 }
-#contact-reset {
+#contact-reset  {
   position: relative;
   height: 45px;
   width: 110px;
   margin-top: 34px;
-  float: left;
+  background-color:#DADADA;
   border: none;
   border-radius: 5px;
   font-family: 'Roboto';
@@ -371,21 +364,20 @@ label,input,textarea,select {
   font-weight: 500;
   font-size: 15px;
   color: #373867CC;
-  background-color:#DADADA;
-
+  float: left;
 }
 footer  {
   position: relative;
-  float: right;
   width: 80%;
   margin-left:0;
+  float: right;
 }
-.first-footer-part{
+.first-footer-part  {
+  height: 300px;
+  margin-left: 0;
   background-color: #373867CC;
-  height: 300px; 
-  margin-left: 0; 
 }
-.footer-title {
+.footer-title  {
   margin-left: 100px;
   padding-top: 62px;
   font-family: 'Roboto';
@@ -395,14 +387,14 @@ footer  {
   color: #FFFFFF;
   text-align: left;
 }
-.footer-list-one {
+.footer-list-one  {
   position: relative;
-  float: right;
   width: 20%;
   padding-top: 5px;
   padding-left: 20px;
+  float: right;
 }
-.footer-list-one h4{
+.footer-list-one h4  {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -410,15 +402,15 @@ footer  {
   line-height: 18px;
   color: #FFFFFF;
 }
-.footer-list-one ol{
+.footer-list-one ol  {
   margin-top: 10px;
   margin-left: 10px;
 }
-.footer-list-one ol li{
+.footer-list-one ol li  {
   list-style: decimal;
   color: #FFFFFF;
 }
-.footer-list-one ol li a{
+.footer-list-one ol li a  {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -426,15 +418,13 @@ footer  {
   line-height: 22px;
   color: #FFFFFF;
 }
-
-#social-media{
+#social-media  {
   width: 50%;
   padding-top: 20px;
   padding-left: 450px;
   padding-bottom: 65px;
 }
-
-#social-media button{
+#social-media button  {
   border: 0px;
   background-color: #FFFFFF;
 }

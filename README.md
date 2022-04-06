@@ -34,9 +34,10 @@ made. Finally, the "footer" was finished with some "h4" labels and ordered lists
 
 ### Week 03
 
-## CSS of Trackgenix
+## CSS of Trackgenix.
 
-The following file intends to be the CSS design of "Trackgenix", taken from the Figma platform.
+The following file intends to be the CSS design of "Trackgenix", taken from the Figma platform. This design
+doesn't intend to be responsive, but respects the 1440x1024 measure.
 
 ## Structure of the repository. 
 
@@ -44,6 +45,13 @@ This project was saved in the folder "Semana-03", next to "Semana-02" (HTML stru
 folder Semana-03 must be opened in the browser. Secondly, the file "index.html" of that folder (not the one 
 from "Semana-02") has to be clicked. After this, the file "styles" clicked to in order to access to the 
 entire project. There the "reset" file and a folder named "img" below CSS (which contains all the images of
-the project) can be found.
+the project) can be found. That "reset" file was placed in order to return all the browser propierties to zero.
 
 ## Structure of the CSS file.
+
+The file contains all the elements, which are predominantly divided in "div" sections. The different elements and classes 
+were ordered in their own order of appearence. The CSS properties were placed following the "Guide to good practices and 
+conventions", located in the Classroom. Many changes were also made in the HTML file. This was a necessary process in order
+to have the page well stylized. 
+
+By: Maria Ana Marraccini.
