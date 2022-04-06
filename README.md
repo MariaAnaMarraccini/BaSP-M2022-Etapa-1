@@ -37,14 +37,14 @@ made. Finally, the "footer" was finished with some "h4" labels and ordered lists
 ## CSS of Trackgenix.
 
 The following file intends to be the CSS design of "Trackgenix", taken from the Figma platform. This design
-doesn't intend to be responsive, but respects the 1440x1024 measure.
+doesn't intend to be responsive, but tries to respect the 1440x1024 measure.
 
 ## Structure of the repository. 
 
 This project was saved in the folder "Semana-03", next to "Semana-02" (HTML structure). In order to enter, the
-folder Semana-03 must be opened in the browser. Secondly, the file "index.html" of that folder (not the one 
-from "Semana-02") has to be clicked. After this, the file "styles" clicked to in order to access to the 
-entire project. There the "reset" file and a folder named "img" below CSS (which contains all the images of
+folder Semana-03 must be opened on the browser. Secondly, the file "index.html" of that folder (not the one 
+from "Semana-02") has to be clicked. After this, the file "styles" has to be clicked in order to access to the 
+entire project styles. There, the "reset" file and a folder named "img" below CSS (which contains all the images of
 the project) can be found. That "reset" file was placed in order to return all the browser propierties to zero.
 
 ## Structure of the CSS file.
