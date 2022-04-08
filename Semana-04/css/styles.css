@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    font-family: 'Roboto';
+}
+@media (min-width: 1024px) {
+    h1{
+        font-size: 70px;
+    }
+    nav{
+        display: flex !important;
+    }
+}
+@media (min-width: 480px) {
+    h1 {
+        font-size: 50px;
+    }
+}
