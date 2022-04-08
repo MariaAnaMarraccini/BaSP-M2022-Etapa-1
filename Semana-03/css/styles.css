@@ -41,7 +41,7 @@ a  {
   position: relative;
   width: 100px;
 }
-.container-search input#search  {
+.container-search input .search  {
   width: 200px;
   height: 25px;
   padding-left: 5px;

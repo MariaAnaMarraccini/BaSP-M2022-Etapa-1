@@ -1,13 +1,24 @@
 body {
-    display: flex;
     font-family: 'Roboto';
 }
+h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
+    padding-bottom: 3%;
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-color:#373867;
+    font-weight: bold;
+    color: #373867;    
+}
+.features-content h2, .why-trackgenix h2, .contact-us h2 {
+    font-size: 30px;
+}
 @media (min-width: 1024px) {
-    h1{
+    h1 {
         font-size: 70px;
     }
+    
     nav{
-        display: flex !important;
+        display: flex;
     }
 }
 @media (min-width: 480px) {
