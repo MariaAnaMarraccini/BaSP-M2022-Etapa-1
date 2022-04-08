@@ -58,4 +58,4 @@ By: Maria Ana Marraccini.
 
 ### Week 04.
 
-https://mariaanamarraccini.github.io/BaSP-M2022-Etapa-1/ 
+https://mariaanamarraccini.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html 
