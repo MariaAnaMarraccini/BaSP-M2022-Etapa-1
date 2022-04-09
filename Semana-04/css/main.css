@@ -3,10 +3,14 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
 }
 .info-contain h2 {
     color: #49A37B;
     font-size: 30px;
     font-weight: 700;
+}
+
+img{
+    max-width: 50%;
+    height: auto;
 }
