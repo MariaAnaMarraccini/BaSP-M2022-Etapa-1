@@ -6,17 +6,25 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
     border-bottom-style: solid;
     border-width: 3px;
     border-color:#373867;
-    font-weight: bold;
+    font-weight: 700;
     color: #373867;    
+}
+.main p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+    color: #373867CC;
 }
 .features-content h2, .why-trackgenix h2, .contact-us h2 {
     font-size: 30px;
 }
+
 @media (min-width: 1024px) {
     h1 {
         font-size: 70px;
     }
-    
     nav{
         display: flex;
     }
