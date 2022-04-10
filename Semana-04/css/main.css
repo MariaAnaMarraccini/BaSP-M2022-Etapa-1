@@ -1,7 +1,13 @@
-
-.info-contain {
+.main p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #373867CC;
+}
+.info-contain, .features-content, .why-trackgenix, .contact-us {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
 }
 .info-contain h2 {
@@ -9,8 +15,24 @@
     font-size: 30px;
     font-weight: 700;
 }
-
-img{
-    max-width: 50%;
+.features-content h2, .why-trackgenix h2, .contact-us h2 {
+    margin-right: 20%;
+    margin-left: 20%;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.info-contain img {
+    max-width: 55%;
     height: auto;
 }
+.why-trackgenix img {
+    max-width: 40%;
+    height: auto;
+}
+.first-contain {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
