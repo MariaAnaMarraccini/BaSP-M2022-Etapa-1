@@ -38,6 +38,9 @@
     justify-content: center;
     align-items: center;
 }
+.first-image {
+    margin-bottom: 3%;
+}
 .info-contain img {
     max-width: 55%;
 }
