@@ -1,19 +1,31 @@
+
 .main p {
+    display: flex;
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    text-align: center;
     color: #373867CC;
+}
+.info-contain p  {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    text-align: center;
 }
 .info-contain, .features-content, .why-trackgenix, .contact-us {
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 .info-contain h2 {
     color: #49A37B;
     font-size: 30px;
     font-weight: 700;
+    text-align: center;
 }
 .features-content h2, .why-trackgenix h2, .contact-us h2 {
     margin-right: 20%;
@@ -21,18 +33,24 @@
     text-transform: uppercase;
     font-size: 30px;
 }
+.first-image, .second-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .info-contain img {
     max-width: 55%;
-    height: auto;
 }
 .why-trackgenix img {
     max-width: 40%;
+}
+.info-contain img, .why-trackgenix img {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
     height: auto;
 }
-.first-contain {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
+
+
 
 
