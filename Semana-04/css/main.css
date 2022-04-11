@@ -95,13 +95,18 @@
     border-width: 0.8px;
     border-color: #373867;
 }
-
 .contact-form{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    
   
 
     border: 1px solid black;
 }
-
+.contact-form label, .contact-form input, .contact-form textarea, .contact-form select  {
+    margin-bottom: 2%;
+    margin-left: 14%;
+    margin-right: 14%; 
+}
 

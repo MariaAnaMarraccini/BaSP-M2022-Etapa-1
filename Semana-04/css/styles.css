@@ -18,6 +18,10 @@ h3 {
     font-size: 16px;
     color: #373867
 }
+label {
+    font-weight: 500;
+    color: #373867;
+}
 .main button {
     display: flex;
     margin-bottom: 2%;
@@ -53,6 +57,9 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
     h1 {
         font-size: 70px;
     }
+    label {
+        font-size: 14px;
+    }
     .main button a {
         font-size: 12px;
     }
@@ -66,6 +73,9 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
 @media (min-width: 480px) {
     h1 {
         font-size: 50px;
+    }
+    label {
+        font-size: 12px;
     }
     .main button a {
         font-size: 9px;
