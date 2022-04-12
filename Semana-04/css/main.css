@@ -1,6 +1,3 @@
-.main {
-border: 1px solid black;
-}
 .main p {
     font-family: 'Roboto';
     font-weight: 400;
@@ -8,7 +5,6 @@ border: 1px solid black;
     line-height: 22px;
     color: #373867CC;
 }
-
 .first-contain {
     display: flex;
     flex-direction: column;
@@ -19,7 +15,6 @@ border: 1px solid black;
 }
 .info-contain img {
     max-width: 55%;
-    /*flex-grow: 1;*/
 }
 .info-contain p  {
     margin-left: 15%;
@@ -45,13 +40,7 @@ border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
 }
-/*
-.info-left, .info-right {
-    flex-shrink: 3;
-}
-*/
 .features-content h2, .why-trackgenix h2, .contact-us h2 {
     margin-right: 20%;
     margin-left: 20%;
@@ -91,7 +80,6 @@ border: 1px solid black;
 }
 .first-image {
     margin-bottom: 3%;
-   /* flex-shrink: 3;*/
 }
 .why-trackgenix h3, .image-left-one, .image-right-two, .first-image, .second-image {
     display: flex;
@@ -117,7 +105,6 @@ border: 1px solid black;
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 1px solid black;
 }
 .contact-form label, .contact-form input, .contact-form textarea, .contact-form select  {
     margin-bottom: 2%;
@@ -143,7 +130,6 @@ border: 1px solid black;
     margin-top: 4%;
     margin-bottom: 5%;
     justify-content: space-around;
-    border: 1px solid black;
 }
 .contact-send input, .contact-reset input {
   margin: auto;
