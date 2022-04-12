@@ -57,10 +57,6 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
 }
 
 @media (min-width: 1024px) {
-    .content{
-        display: flex;
-        flex-direction: row;
-    }
     nav{
         display: flex;
     }
@@ -83,8 +79,7 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
         font-size: 12px;
     }
     .first-contain {
-        display: flex;
-        flex: row;
+        flex-direction: row;
     }
 
     .info-left{
@@ -97,7 +92,7 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
         text-align: justify;
     }
     .second-contain {
-        display: flex;
+        /*display: flex;*/
         flex-direction: row-reverse;
     }
     .info-right{
