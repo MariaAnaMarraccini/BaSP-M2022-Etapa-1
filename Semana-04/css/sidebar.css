@@ -12,7 +12,6 @@ nav{
     opacity: 0.9;
     border: 1px solid black;
 }
-
 .container-search  {
     display: flex;
     padding-top: 8%;
@@ -67,12 +66,6 @@ nav{
     border-color: #49A37B;
     margin-left: 8%;
     margin-right: 8%;
-    /* padding-left: 4%;
-    padding-right: 4%; */
-    /* font-family: 'Roboto';
-    font-style: normal;
-    font-size: 15px;
-    font-weight: 400; */
     color: #373867;
   }
   .sub-menu  {
@@ -84,20 +77,12 @@ nav{
     margin-top: 1%;
   }
   .sub-menu li a  {
-    /* font-family: 'Roboto';
-    font-style: normal;
-    font-size: 15px; */
     color: #373867;
   }
   .get-in-touch  {
     margin-top: 30%;
   }
   .more-data li  {
-    /* margin-top: 12px;
-    font-style: normal;
-    font-size: 15px;
-    font-family: 'Roboto';
-    font-weight: 400; */
     margin-left: 8%;
     margin-right: 8%;
     margin-top: 4%;
