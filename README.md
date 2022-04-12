@@ -58,4 +58,28 @@ By: Maria Ana Marraccini.
 
 ### Week 04.
 
+# LINK:
+
 https://mariaanamarraccini.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html 
+
+# CSS of Trackgenix with FLEX.
+
+This work intends to be the responsive design of Trackgenix using FLEX and Media Queries. 
+
+## Structure of the repository. 
+
+The work was saved in the new folder "Semana-04". It has inside both HTML and Reset files. It also has de images and, of 
+course, de CSS files. In order to enter, the folder Semana-04 must be opened on the browser. Secondly, the index-html 
+has to be clicked. The difference with the previous project is that now the link of GITHUB pages can be clicked. This allows
+the person to see immediately the work. This link was placed in this README file. 
+
+## Structure of the CSS file.
+
+The CSS design was divided in different files: Header, Sidebar, Main, Footer and Styles. This last file contains the global
+elements of the page and those that may not be global (like the "h2" titles, they are not all the same), but reperesent
+a great part of the totality of the page. For example, h1 and .main h2 elements share a big part of the syles, so I decided
+to put them together in Styles in order to make the code simplier. 
+The use of Media Queries intends to be responsable and not abusive. It is for this reason that the "flex" properties 
+are not placed there unless it was really necessary. 
+
+By: Maria Ana Marraccini. 
