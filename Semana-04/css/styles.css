@@ -55,7 +55,6 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
     text-align: center;
     color: #373867;
 }
-
 @media (min-width: 1024px) {
     nav{
         display: flex;
@@ -82,7 +81,7 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
         flex-direction: row;
     }
 
-    .info-left{
+    .info-left {
         max-width: 50%;
     }
     .info-contain img {
@@ -103,7 +102,6 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
     .item {
         font-size: 24px;
     }
-
     .contain-one {
         display: flex;
     }
