@@ -1,0 +1,1 @@
+console.log('--EXERCISE 2: STRINGS')
