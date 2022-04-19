@@ -1,46 +1,46 @@
 console.log('--EXERCISE 3: ARRAYS');
 
-//a. Dado el siguiente array: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
- //"Octubre", "Noviembre", "Diciembre"] mostrar por consola los meses 5 y 11 (utilizar console.log).
+//a. Given the following array: ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+//"October", "November", "December"] display months 5 and 11 on the console (use console.log).
 
 console.log('Exercise 3.a.');
-var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
-"Octubre", "Noviembre", "Diciembre"];
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+"October", "November", "December"];
 console.log('result: ' + months[4] + ' ' + months[10]);
 
-//b. Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).
+//b. Sort the month array alphabetically and display it on the console (use sort).
 
 console.log('Exercise 3.b.');
 var ordered = months.sort();
 console.log('result: ' + ordered);
 
-//c. Agregar un elemento al principio y al final del array (utilizar unshift y push).
+//c. Add an element to the beginning and end of the array (use unshift and push).
 
 console.log('Exercise 3.c.');
 months.unshift(2022) + months.push(2023);
 console.log('result: ' + months);
 
-//d. Quitar un elemento del principio y del final del array (utilizar shift y pop).
+//d. Remove an element from the beginning and the end of the array (use shift and pop).
 
 console.log('Exercise 3.d.');
 months.shift() + months.pop(); //I removed the "2022" and "2023" elements that I've put before.
 console.log('result: ' + months);
 
-//e. Invertir el orden del array (utilizar reverse).
+//e. Reverse the order of the array (use reverse).
 
 console.log('Exercise 3.e.');
 months.reverse(); //I reversed the order of the alphabetical ordered array.
 console.log('result: ' + months);
 
-//f. Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
+//F. Join all the elements of the array into a single string where each month is separated by a hyphen - (use join).
 
 console.log('Exercise 3.f.');
-var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
-"Octubre", "Noviembre", "Diciembre"];
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+"October", "November", "December"];  
 var separetedMonths = months.join('-');
 console.log('result: ' + separetedMonths);
 
-//g. Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
+//g. Create a copy of the month array containing May through November (use slice).
 
 console.log('Exercise 3.g.');
 var mayNov = months.slice(4,11);
