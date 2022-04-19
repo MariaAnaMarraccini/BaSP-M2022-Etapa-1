@@ -91,3 +91,18 @@ By: Maria Ana Marraccini.
 # LINK:
 
 https://mariaanamarraccini.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html
+
+## Exercises of Javascript.
+
+This week a lot of exercises of Javascript were made in order to learn how to use the language correctly. To
+achieve this goal, 6 files were created: Varables and operators; Strings; Arrays; If else; For; and Functions. 
+Each file has different exercises where creativity, ingenuity and logic had to be properly used to get a good
+result. 
+
+## Correction of the CSS file.
+
+Last week the CSS using "flex" was made. This week it was intended that some corrections were made. One of the
+most difficult tasks was to order the nav without extra divs and without using flex. Some mistakes using media
+queries were also corrected. 
+
+By: Maria Ana Marraccini.
