@@ -4,6 +4,7 @@ body {
 h1 {
     margin-left: 4%;
     margin-right: 4%;
+    font-size: 50px;
 }
 img {
     border: 0.7px solid #373867;
@@ -21,9 +22,11 @@ h3 {
 label {
     font-weight: 500;
     color: #373867;
+    font-size: 11px;
 }
 h4  {
     font-weight: 700;
+    font-size: 12px;
     line-height: 18px;
     color: #FFFFFF;
   }
@@ -40,7 +43,7 @@ h4  {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    size: 12px;
+    font-size: 9px;
     color: #373867;
 }
 h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
@@ -56,15 +59,19 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
     color: #373867;
 }
 @media (min-width: 1024px) {
-    nav{
-        display: flex;
+
+    nav {
+        display: inline;
+    }
+    header, footer, .main {
+        margin-left: 25%;
     }
     h1 {
         font-size: 70px;
         text-align: left;
     }
     label {
-        font-size: 14px;
+        font-size: 8px;
     }
     h4 {
         font-size: 15px;
@@ -120,13 +127,38 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
     .contact-form {
         justify-content: left;
     }
+    .contact-form label, .contact-form input, .contact-form select {
+        margin-bottom: 0.5%;
+        margin-left: 5%;
+        margin-right: 63%;
+    }
+    .contact-form textarea {
+        min-height: 10%;
+        margin-bottom: 0.5%;
+        margin-left: 5%;
+        margin-right: 40%;
+    }
+    .buttons-contact {
+        margin-left: 0.5%;
+        margin-right: 67%;
+        margin-top: 3%;
+    }
+    .footer-title {
+        display: flex;
+    }
+    .footer-list-one ol li  {
+        font-size: 15px;
+    }
+    .footer-list-one ol li a  {
+        font-size: 15px;
+    }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     h1 {
         font-size: 60px;
     }
     label {
-        font-size: 13px;
+        font-size: 12px;
     }
     h4 {
         font-size: 13px;
@@ -136,22 +168,5 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
     }
     .features-content ul li {
         font-size: 16px;
-    }
-}
-@media (min-width: 480px) {
-    h1 {
-        font-size: 50px;
-    }
-    label {
-        font-size: 12px;
-    }
-    h4 {
-        font-size: 12px;
-    }
-    .main button a {
-        font-size: 9px;
-    }
-    .features-content ul li {
-        font-size: 14px;
     }
 }

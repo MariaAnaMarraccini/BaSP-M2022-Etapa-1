@@ -1,15 +1,12 @@
+
 nav {
   display: none;
-  flex-direction: column;
-  flex-basis: 20%;
-  justify-content: flex-start;
+  position: fixed;
+  width: 25%;
   height: 100%;
+  bottom: 1px;
   background-color: #B1B2B6;
   opacity: 0.9;
-}
-.content {
-  display: flex;
-  flex-direction: row;
 }
 .container-search {
   display: flex;

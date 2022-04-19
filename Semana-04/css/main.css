@@ -68,6 +68,7 @@
 }
 .features-content ul li {
     font-weight: 400;
+    font-size: 14px;
     list-style: disc;
     color: #373867
 }
@@ -123,8 +124,6 @@
 }
 .buttons-contact {
     display: flex;
-    margin-left: 14%;
-    margin-right: 16%;
     margin-top: 4%;
     margin-bottom: 5%;
     justify-content: space-around;
@@ -139,9 +138,10 @@
   color: #373867CC;
   padding-top: 10%;
   padding-bottom: 10%;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 30%;
+  padding-right: 30%;
 }
+
 .contact-send input {
     background-color: #AACE9B;
 }

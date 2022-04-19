@@ -1,8 +1,8 @@
 console.log('--EXERCISE 6: FUNCIONES');
 
-//a. Crear una función suma que reciba dos valores numéricos y retorne el resultado.
-//Ejecutar la función y guardar el resultado en una variable, mostrando el valor de
-//dicha variable en la consola del navegador.
+//a. Create a sum function that receives two numeric values ​​and returns the result.
+//Execute the function and save the result in a variable, showing the value of
+// this variable in the browser console.
 
 console.log('Exercise 6.a.');
 function sum(n1, n2) {
@@ -10,8 +10,8 @@ function sum(n1, n2) {
 }
 console.log('result: ' + sum(2,5));
 
-//b. A la función suma anterior, agregarle una validación para controlar si alguno de los parámetros no es un número,
-//mostrar una alerta aclarando que uno de los parámetros tiene error y retornar el valor NaN como resultado.
+//b. To the sum function above, add a validation to check if any of the parameters is not a number,
+//display an alert clarifying that one of the parameters has an error and return the NaN value as the result.
 
 console.log('Exercise 6.b.');
 function sum2(n1, n2) {
@@ -25,7 +25,7 @@ function sum2(n1, n2) {
 }
 console.log('result: ' + sum2('abc',5));
 
-//c. Crear una función validate integer que reciba un número como parámetro y devuelva verdadero si es un número entero.
+//c. Create a validate integer function that takes a number as a parameter and returns true if it's an integer.
 
 console.log('Exercise 6.c.');
 function validateInteger(n) {
@@ -33,8 +33,8 @@ function validateInteger(n) {
 }
 console.log('result: ' + validateInteger(2.5));
 
-//d. A la función suma del ejercicio 6b) agregarle una llamada que valide que los números sean enteros. 
-//En caso que haya decimales mostrar un alerta con el error y retorna el número convertido a entero (redondeado).
+//d.To the sum function of exercise 6b) add a call that validates that the numbers are integers.
+//If there are decimals, show an alert with the error and return the number converted to an integer (rounded).
 
 console.log('Exercise 6.d.');
 function sum3(n1, n2) {
@@ -54,9 +54,8 @@ function sum3(n1, n2) {
 }
 console.log('result: ' + sum3(5.2,8.9));
 
-//e.Convertir la validación del ejercicio 6d) en una función separada 
-//y llamarla dentro de la función suma probando que todo siga funcionando igual.
-
+//e.Convert validation from exercise 6d) to a separate function
+//and call it inside the sum function testing that everything still works the same.
 console.log('Exercise 6.e.');
 function validation(n1, n2) {
     let number1 = validateInteger(n1);
