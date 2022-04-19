@@ -4,7 +4,7 @@ console.log('--EXERCISE 5: FOR');
 //from JavaScript to display an alert using each of the words.
 
 console.log('Exercise 5.a.');
-var days = ["monday","tuesday","wednesdaye","thursday","friday"];
+var days = ["monday","tuesday","wednesday","thursday","friday"];
 for (let i = 0; i < days.length; i++) {
     alert(days[i]);
 }
