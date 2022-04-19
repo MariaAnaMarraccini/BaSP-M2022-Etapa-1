@@ -59,6 +59,7 @@ function sum3(n1, n2) {
     }
 }
 console.log('result: ' + sum3(5.2,8.9));
+console.log('result: ' + sum3(9,6.147));
 console.log('result: ' + sum3('abc', 9));
 
 //e.Convert validation from exercise 6d) to a separate function
@@ -87,4 +88,5 @@ function sum4(n1,n2) {
     return validation(n1,n2);
 }
 console.log('result: ' + sum3(5,7.4));
+console.log('result: ' + sum3(3.1,4.9))
 console.log('result: ' + sum3('nnn',8));
