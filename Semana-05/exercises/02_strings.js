@@ -44,7 +44,7 @@ console.log('result: the space in the var ' + word + ' is in character number ' 
 //both words capitalized and all other letters lowercase (use indexOf, substring, toUpperCase, toLowerCase, and the + operator).
 
 console.log('Exercise 2.f.');
-var twoWords = 'tjken adopt';
+var twoWords = 'token adopt';
 var result = twoWords.substring(twoWords.indexOf('t'),1).toUpperCase() + twoWords.substring(1,5).toLowerCase()+ 
 twoWords.substring(twoWords.indexOf(' '),6) + twoWords.substring(twoWords.indexOf('a'),7).toUpperCase() +  
 twoWords.substring(7,11).toLowerCase();
