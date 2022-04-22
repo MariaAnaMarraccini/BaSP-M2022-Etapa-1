@@ -106,3 +106,9 @@ most difficult tasks was to order the nav without extra divs and without using f
 queries were also corrected. 
 
 By: Maria Ana Marraccini.
+
+### Week 06.
+
+# LINK: 
+
+https://mariaanamarraccini.github.io/BaSP-M2022-Etapa-1/Semana-06/index.html
