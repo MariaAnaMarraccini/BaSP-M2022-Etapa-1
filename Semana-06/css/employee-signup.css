@@ -1,0 +1,10 @@
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 50%;
+    margin-bottom: 40%;
+    margin-top: 8%;
+    font-family: 'Roboto';
+    color: #373867CC;
+}
