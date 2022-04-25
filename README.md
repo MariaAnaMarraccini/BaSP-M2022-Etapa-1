@@ -111,4 +111,4 @@ By: Maria Ana Marraccini.
 
 # LINK: 
 
-https://mariaanamarraccini.github.io/BaSP-M2022-Etapa-1/Semana-06/views/
+https://mariaanamarraccini.github.io/BaSP-M2022-Etapa-1/Semana-06/views/index
