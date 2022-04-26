@@ -52,8 +52,19 @@ function signUp(event){
   var validatePostCode = reviewPostCode() == false ? error = true : '';
   if(error == false){
     var name = document.getElementById('first-name').value;
-    return  window.confirm('New User '+ name);
-    var lastname
+    var lastname = document.getElementById('last-name').value;
+    var document_number = document.getElementById('document').value;
+    var date_birth = document.getElementById('date'). value;
+    var phone_number = document.getElementById('phone').value;
+    var adress = document.getElementById('adress').value;
+    var city = document.getElementById('city').value;
+    var postCode = document.getElementById('post-code').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var repeatPassword = document.getElementById('repeat-password').value;
+    return  window.confirm('New User '+ name + ' ' + lastname + ' ' + document_number + ' '+ date_birth + ' ' + 
+    adress + ' ' + city + ' ' + postCode + ' ' + email + ' ' + password);
+    
     /*
   }else{
     reviewFirstName();
