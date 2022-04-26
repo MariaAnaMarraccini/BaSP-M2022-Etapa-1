@@ -35,7 +35,7 @@ function signUp(event){
     document.getElementById('wrong-email');
     error = true;
   }
-  var validatePassword = reviewPassword() == false ? error = true : ''; //Ternary contional to simplificate
+  var validatePassword = reviewPassword() == false ? error = true : ''; //Ternary conditional to simplificate
   var validateRepeatPassword = reviewRepeatPassword() == false ? error = true : '';
   // Compare the passwords
   if(password !== repeatPassword){
@@ -196,7 +196,8 @@ function clearAdress(){
 function reviewAdress(){
   var adress = document.getElementById('adress').value;
   var error = false;
-  var illegalChars = [',', '#', '-', '/', '!', '@', '$', '%',  '^', '*', '(', ')' , '{',  '}', '|', '[',  ']' , '\\',];
+  var illegalChars = [',', '#', '-', '/', '!', '@', '$', '%',  '^', '*', '(', ')' , '{',  '}', '|', '[',  ']' , '\\'];
+  var space = [' '];
   var adressToArray = adress.split('');
   if(adress.length < 5){
     error = true;
@@ -207,6 +208,11 @@ function reviewAdress(){
     error = true;
     }
   }
+  var findSpace = adress.indexOf(space);
+    if(findSpace == -1 || findSpace >= adress.length){
+      error = true;
+    }
+    console.log(findSpace)
   if(error == true){
     document.getElementById('wrong-adress').textContent='The Adress is not valid';
     return false;
