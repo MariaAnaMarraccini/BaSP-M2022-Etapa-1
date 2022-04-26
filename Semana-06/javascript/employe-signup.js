@@ -209,7 +209,8 @@ function reviewAdress(){
     }
   }
   var findSpace = adress.indexOf(space);
-    if(findSpace == -1 || findSpace >= adress.length){
+  console.log(findSpace, adress.length)
+    if(findSpace == -1 || findSpace ==  adress.length -1){
       error = true;
     }
     console.log(findSpace)
