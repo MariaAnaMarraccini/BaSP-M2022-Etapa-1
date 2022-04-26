@@ -23,16 +23,21 @@ function logIn(event) {
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value; 
   var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+  
   if(!validateEmail.test(email)) {
     document.getElementById('wrong-email');
   }
   var validatePassword = reviewPassword();
-  if(email.length > 0 && password.length > 0 && validatePassword == true && validateEmail == true){
-    return  window.confirm('Valid User');
-  }else{
+  
+  if(email.length > 0 && password.length > 0 && validatePassword == true && validateEmail.test(email) == true){
+    
+    return  window.confirm(email + ' valid user detected with password: '+ password);
+  /*}else{
     reviewPassword() 
     reviewEmail()
-  }
+  }*/
+}
+
 }
 function clearPassword(){
   var password = document.getElementById('password'); 
