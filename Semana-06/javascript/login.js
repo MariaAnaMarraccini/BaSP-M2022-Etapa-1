@@ -21,12 +21,18 @@ function reviewEmail(){
 function logIn(event) {
   event.preventDefault();
   var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value; 
   var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
   if(!validateEmail.test(email)) {
     document.getElementById('wrong-email');
   }
-  reviewPassword();
-  return  window.confirm('Valid User');;
+  var validatePassword = reviewPassword();
+  if(email.length > 0 && password.length > 0 && validatePassword == true && validateEmail == true){
+    return  window.confirm('Valid User');
+  }else{
+    reviewPassword() 
+    reviewEmail()
+  }
 }
 function clearPassword(){
   var password = document.getElementById('password'); 
@@ -61,8 +67,10 @@ function reviewPassword(){
   }
   if (error == true){
     document.getElementById('wrong-password').textContent="The password is not valid";
+    return false;
   }else if(isLetter == false || isNumber == false){
     document.getElementById('wrong-password').textContent="The password is not valid";
+    return false;
   }
-  
+  return true;
 }

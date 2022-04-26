@@ -20,7 +20,7 @@
 </head>
 <body>
     <header>
-        <h1>Trackgenix SA</h1>
+        <h1>Sign Up</h1>
     </header>
     <nav>
         <form>
@@ -65,39 +65,95 @@
         </ul>
     </nav>
     <form class="sign-up">
-        <label for="">First Name</label>
-        <input name="first-name" id="first-name" type="text">
-        <span id="wrong-first-name"></span>
-        <label for="">Last Name</label>
-        <input  name="last-name" id="last-name" type="text">
-        <span id="wrong-last-name"></span>
-        <label for="">Documnent</label>
-        <input name="document" id="document" type="text">
-        <span id="wrong-document"></span>
-        <label for="">Date of Birth</label>
-        <input name="date" id="date" type="date">
-        <span id="wrong-date"></span>
-        <label for="">Phone Number</label>
-        <input name="phone" id="phone" type="text">
-        <span id="wrong-phone"></span>
-        <label for="">Adress</label>
-        <input name="adress" id="adress" type="text">
-        <span id="wrong-adress"></span>
-        <label for="">City</label>
-        <input name="city" id="city" type="text">
-        <span id="wrong-city"></span>
-        <label for="">Postal Code</label>
-        <input name="post-code" id="post-code" type="text">
-        <span id="wrong-post-code"></span>
-        <label for="">Email</label>
-        <input name="email" id="email" type="text">
-        <span id="wrong-email"></span>
-        <label for="">Password</label>
-        <input name="password" id="password" type="password" >
-        <span id="wrong-password"></span>
-        <label for="">Repeat Password</label>
-        <input name="repeat-password" id="repeat-password" type="password">
-        <span id="wrong-repeat-password"></span>
+        <div class="inputs-labels">
+            <div class="input-field">
+                <label>First Name</label>
+                <input name="first-name" id="first-name" type="text">
+                <div class="error-message">
+                    <span id="wrong-first-name"></span>
+                </div>
+            </div>
+            <div class="input-field">
+                <label>Last Name</label>
+                <input  name="last-name" id="last-name" type="text">
+                <div class="error-message">
+                    <span id="wrong-last-name"></span>
+                </div>
+            </div>  
+        </div>
+        <div class="inputs-labels">
+            <div class="input-field">
+                <label>Document</label>
+                <input name="document" id="document" type="text">
+                <div class="error-message"> 
+                    <span id="wrong-document"></span>
+                </div>
+            </div>
+            <div class="input-field">
+                <label>Date of Birth</label>
+                <input name="date" id="date" type="date">
+                <div class="error-message"> 
+                    <span id="wrong-date"></span>
+                </div>
+            </div>
+        </div>
+        <div class="inputs-labels">
+            <div class="input-field">
+                <label>Phone Number</label>
+                <input name="phone" id="phone" type="text">
+                <div class="error-message"> 
+                    <span id="wrong-phone"></span>
+                </div>
+            </div>
+            <div class="input-field">
+                <label>Adress</label>
+                <input name="adress" id="adress" type="text">
+                <div class="error-message">
+                    <span id="wrong-adress"></span>
+                </div>
+            </div>
+        </div>
+        <div class="inputs-labels">
+            <div class="input-field">
+                <label>City</label>
+                <input name="city" id="city" type="text">
+                <div class="error-message">
+                    <span id="wrong-city"></span>
+                </div>
+            </div>
+            <div class="input-field">
+                <label>Postal Code</label>
+                <input name="post-code" id="post-code" type="text">
+                <div class="error-message">  
+                    <span id="wrong-post-code"></span>
+                </div>
+            </div>
+        </div>
+        <div class="inputs-labels">
+            <div class="input-field">
+                <label>Email</label>
+                <input name="email" id="email" type="text">
+                <div class="error-message">
+                    <span id="wrong-email"></span>
+                </div>
+            </div>
+            <div class="input-field">
+                <label>Password</label>
+                <input name="password" id="password" type="password" >
+                <div class="error-message">
+                    <span id="wrong-password"></span>
+                </div>
+            </div>
+        </div>
+        <div class="inputs-labels">
+            <div class="input-field">
+                <label>Repeat Password</label>
+                <input name="repeat-password" id="repeat-password" type="password">
+                <div class="error-message">
+                    <span id="wrong-repeat-password"></span>
+                </div>
+            </div>
+        </div>
         <button id="send" type="submit" >Sign Up</button>
     </form>
     <footer>

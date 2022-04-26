@@ -1,8 +1,8 @@
 window.onload = function(){
-    document.getElementById('firstname').addEventListener('blur',reviewFirstName);
-    document.getElementById('firstname').addEventListener('focus',clearFirstName);
-    document.getElementById('lastname').addEventListener('blur',reviewLastName);
-    document.getElementById('lastname').addEventListener('focus',clearLastName);
+    document.getElementById('first-name').addEventListener('blur',reviewFirstName);
+    document.getElementById('first-name').addEventListener('focus',clearFirstName);
+    document.getElementById('last-name').addEventListener('blur',reviewLastName);
+    document.getElementById('last-name').addEventListener('focus',clearLastName);
     document.getElementById('document').addEventListener('blur',reviewDocument);
     document.getElementById('document').addEventListener('focus',clearDocument);
     document.getElementById('date').addEventListener('blur',reviewDate);
@@ -13,14 +13,14 @@ window.onload = function(){
     document.getElementById('adress').addEventListener('focus',clearAdress);
     document.getElementById('city').addEventListener('blur',reviewCity);
     document.getElementById('city').addEventListener('focus',clearCity);
-    document.getElementById('postCode').addEventListener('blur',reviewPostCode);
-    document.getElementById('postCode').addEventListener('focus',clearPostCode);
+    document.getElementById('post-code').addEventListener('blur',reviewPostCode);
+    document.getElementById('post-code').addEventListener('focus',clearPostCode);
     document.getElementById('email').addEventListener('blur',reviewEmail);
     document.getElementById('email').addEventListener('focus',clearEmail);
     document.getElementById('password').addEventListener('blur',reviewPassword);
     document.getElementById('password').addEventListener('focus',clearPassword);
-    document.getElementById('repeatpassword').addEventListener('blur',reviewRepeatPassword);
-    document.getElementById('repeatpassword').addEventListener('focus',clearRepeatPassword);
+    document.getElementById('repeat-password').addEventListener('blur',reviewRepeatPassword);
+    document.getElementById('repeat-password').addEventListener('focus',clearRepeatPassword);
     document.getElementById('send').addEventListener('click',signUp);
   }
 
@@ -39,8 +39,8 @@ function clearFirstName(){
 function reviewFirstName(){
   var name = document.getElementById('first-name').value;
   var error = false;
-  var validateName = ['a','b','c',"d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
-  "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," "];
+  var validateName = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
   var nameToArray = name.split('');
   if(name.length < 3){
     error = true;
@@ -53,7 +53,7 @@ function reviewFirstName(){
   }
   }
   if(error == true){
-    document.getElementById('wrong-firstname').textContent='The First Name is not valid';
+    document.getElementById('wrong-first-name').textContent='The First Name is not valid';
   }
 }
 function clearLastName(){
@@ -64,8 +64,8 @@ function clearLastName(){
 function reviewLastName(){
   var lastname = document.getElementById('last-name').value;
   var error = false;
-  var validateName = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r',"s","t","u","v","w","x","y","z",
-  "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," "];
+  var validateName = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
   var nameToArray = lastname.split('');
   if(lastname.length < 3){
     error  = true;
@@ -173,8 +173,8 @@ function clearCity(){
 }
 function reviewCity(){
   var city = document.getElementById('city').value;
-  var validateCityLetter = ['a','b','c',"d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
-  "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," "];
+  var validateCityLetter = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
   var cityToArray = city.split('');
   var error = false;
   if(city.length < 3){
@@ -192,12 +192,12 @@ function reviewCity(){
   }
 }
 function clearPostCode(){
-  var postCode = document.getElementById('postCode'); 
+  var postCode = document.getElementById('post-code'); 
   document.getElementById('wrong-post-code').textContent=' ';
   postCode.value = '';
 }
 function reviewPostCode(){
-  var postCode = document.getElementById('postCode').value;
+  var postCode = document.getElementById('post-code').value;
   var error = false;
   var phoneToArray = postCode.split('');
   if(postCode.length < 4 || postCode.length > 5){
@@ -211,7 +211,7 @@ function reviewPostCode(){
     }
   }
   if(error == true){
-    document.getElementById('wrong-postCode').textContent='The Postal Code is not valid';
+    document.getElementById('wrong-post-code').textContent='The Postal Code is not valid';
   }
 }
 
@@ -234,8 +234,8 @@ function clearPassword(){
 }
 function reviewPassword(){
   var password = document.getElementById('password').value;
-  var validatePassword = ['a','b','c',"d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
-  "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," "];
+  var validatePassword = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
   var validatePassword2 = ['1','2','3','4','5','6','7','8','9', '0']
   var passwordToArray = password.split(''); 
   var error = false; //This is in order to display the alert or not. We presume that the password is correct.
@@ -271,9 +271,9 @@ function clearRepeatPassword(){
 }
 function reviewRepeatPassword(){
   var password = document.getElementById('repeat-password').value;
-  var validatePassword = ['a','b','c',"d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
-  "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," "];
-  var validatePassword2 = ['1','2','3','4','5','6','7','8','9', '0']
+  var validatePassword = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
+  var validatePassword2 = ['1','2','3','4','5','6','7','8','9', '0'];
   var passwordToArray = password.split(''); 
   var error = false; //This is in order to display the alert or not. We presume that the password is correct.
   var isLetter = false;
