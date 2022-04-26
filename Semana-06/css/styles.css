@@ -157,12 +157,12 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
     .footer-title {
         display: flex;
     }
-    .footer-list-one ol li  {
+    .footer-list-one ol li {
         font-size: 15px;
     }
-    .footer-list-one ol li a  {
+    .footer-list-one ol li a {
         font-size: 15px;
-    }
+   }
 }
 @media (min-width: 768px) {
     h1 {
@@ -179,5 +179,8 @@ h1, .features-content h2, .why-trackgenix h2, .contact-us h2 {
     }
     .features-content ul li {
         font-size: 16px;
+    }
+    .input-field{
+        margin-right: 10%;
     }
 }
