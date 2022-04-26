@@ -51,7 +51,10 @@ function signUp(event){
   var validateAdress = reviewAdress() == false ? error = true : '';
   var validatePostCode = reviewPostCode() == false ? error = true : '';
   if(error == false){
-    return  window.confirm('Valid User');
+    var name = document.getElementById('first-name').value;
+    return  window.confirm('New User '+ name);
+    var lastname
+    /*
   }else{
     reviewFirstName();
     reviewLastName();
@@ -63,7 +66,7 @@ function signUp(event){
     reviewPhone();
     reviewPassword();
     reviewRepeatPassword(); 
-    reviewEmail();
+    reviewEmail();*/
   }
 }
 function clearFirstName(){
@@ -154,6 +157,12 @@ function reviewDate(){
   var date_birth = document.getElementById('date').value;
   var error = false;
   var date = new Date(date_birth);
+  var today = new Date();
+  var calculateAge = today.getFullYear() - date.getFullYear();
+  if(calculateAge < 18){
+    error = true;
+  }
+  
   if(date.toString() == 'Invalid Date'){
     error = true;
   }
@@ -210,7 +219,7 @@ function reviewAdress(){
   }
   var findSpace = adress.indexOf(space);
   console.log(findSpace, adress.length)
-    if(findSpace == -1 || findSpace ==  adress.length -1){
+    if(findSpace == -1 || findSpace ==  adress.length -1){ //If there is a space at the end, the index will be equal to the lenght of the adress - 1
       error = true;
     }
     console.log(findSpace)
