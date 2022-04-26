@@ -26,21 +26,44 @@ window.onload = function(){
 
 function signUp(event){
   event.preventDefault();
+  var error = false;
   var email = document.getElementById('email').value;
-  var password = document.getElementById('password').value; 
+  var password = document.getElementById('password').value;
+  var repeatPassword = document.getElementById('repeat-password').value;
   var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
   if(!validateEmail.test(email)) {
     document.getElementById('wrong-email');
+    error = true;
   }
-  var validatePassword = reviewPassword();
-  var validateFirstName = reviewFirstName();
-  var validateLastName = reviewLastName();
-  var validate = reviewDate();
-  if(email.length > 0 && password.length > 0 && validatePassword == true && validateEmail == true){
+  var validatePassword = reviewPassword() == false ? error = true : ''; //Ternary contional to simplificate
+  var validateRepeatPassword = reviewRepeatPassword() == false ? error = true : '';
+  // Compare the passwords
+  if(password !== repeatPassword){
+    error = true;
+    document.getElementById('wrong-repeat-password').textContent='The password is not valid';
+  }
+  var validateFirstName = reviewFirstName() == false ? error = true : '';
+  var validateLastName = reviewLastName() == false ? error = true : '';
+  var validateDate = reviewDate() == false ? error = true : '';
+  var validateDocument = reviewDocument() == false ? error = true : '';
+  var validatePhone = reviewPhone() == false ? error = true : '';
+  var validateCity = reviewCity() == false ? error = true : '';
+  var validateAdress = reviewAdress() == false ? error = true : '';
+  var validatePostCode = reviewPostCode() == false ? error = true : '';
+  if(error == false){
     return  window.confirm('Valid User');
   }else{
-    reviewPassword() 
-    reviewEmail()
+    reviewFirstName();
+    reviewLastName();
+    reviewDocument();
+    reviewDate();
+    reviewAdress();
+    reviewCity();
+    reviewPostCode();
+    reviewPhone();
+    reviewPassword();
+    reviewRepeatPassword(); 
+    reviewEmail();
   }
 }
 function clearFirstName(){
@@ -66,7 +89,9 @@ function reviewFirstName(){
   }
   if(error == true){
     document.getElementById('wrong-first-name').textContent='The First Name is not valid';
+    return false;
   }
+  return true;
 }
 function clearLastName(){
   var lastname = document.getElementById('last-name');
@@ -91,7 +116,9 @@ function reviewLastName(){
     }
   if(error == true){
       document.getElementById('wrong-last-name').textContent="The Last Name is not valid";
+      return false;
   }
+  return true;
 }
 function clearDocument(){
   var document_number = document.getElementById('document');
@@ -114,7 +141,9 @@ function reviewDocument(){
   }
   if(error == true){
     document.getElementById('wrong-document').textContent='The Document is not valid';
+    return false;
   }
+  return true;
 }
 function clearDate(){
   var date_birth = document.getElementById('date');
@@ -130,7 +159,9 @@ function reviewDate(){
   }
   if(error == true){
     document.getElementById('wrong-date').textContent='The Date of Birth is not valid';
+    return false;
   }
+  return true;
 }
 function clearPhone(){
   var phone = document.getElementById('phone');
@@ -153,7 +184,9 @@ function reviewPhone(){
   }
   if(error == true){
     document.getElementById('wrong-phone').textContent='The Phone Number is not valid';
+    return false;
   }
+  return true;
 }
 function clearAdress(){
   var adress = document.getElementById('adress'); 
@@ -176,7 +209,9 @@ function reviewAdress(){
   }
   if(error == true){
     document.getElementById('wrong-adress').textContent='The Adress is not valid';
+    return false;
   }
+  return true;
 }
 function clearCity(){
   var city = document.getElementById('city'); 
@@ -201,7 +236,9 @@ function reviewCity(){
   }
   if(error == true){
     document.getElementById('wrong-city').textContent='The City is not valid';
+    return false;
   }
+  return true;
 }
 function clearPostCode(){
   var postCode = document.getElementById('post-code'); 
@@ -224,7 +261,9 @@ function reviewPostCode(){
   }
   if(error == true){
     document.getElementById('wrong-post-code').textContent='The Postal Code is not valid';
+    return false;
   }
+  return true;
 }
 
 function clearEmail(){
@@ -236,7 +275,7 @@ function reviewEmail(){
   var email = document.getElementById('email').value;
   var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
   if(!validateEmail.test(email)) { // I've put the "!" in order to validate if the condition is FALSE
-    document.getElementById('wrong-email').textContent='The email is not valid';
+    document.getElementById('wrong-email').textContent='The email is not valid'
   }
 }
 function clearPassword(){
@@ -248,7 +287,7 @@ function reviewPassword(){
   var password = document.getElementById('password').value;
   var validatePassword = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
   'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
-  var validatePassword2 = ['1','2','3','4','5','6','7','8','9', '0']
+  var validatePassword2 = ['1','2','3','4','5','6','7','8','9', '0'];
   var passwordToArray = password.split(''); 
   var error = false; //This is in order to display the alert or not. We presume that the password is correct.
   var isLetter = false;
@@ -272,10 +311,13 @@ function reviewPassword(){
   }
   if (error == true){
     document.getElementById('wrong-password').textContent='The password is not valid';
+    return false;
   }else if(isLetter == false || isNumber == false){
     document.getElementById('wrong-password').textContent='The password is not valid';
+    return false;
   }
-  }
+  return true;
+}
 function clearRepeatPassword(){
   var password = document.getElementById('repeat-password'); 
   document.getElementById('wrong-repeat-password').textContent=' ';
@@ -309,7 +351,10 @@ function reviewRepeatPassword(){
   }
   if (error == true){
     document.getElementById('wrong-repeat-password').textContent='The password is not valid';
+    return false;
   }else if(isLetter == false || isNumber == false){
     document.getElementById('wrong-repeat-password').textContent='The password is not valid';
-  } 
+    return false;
+  }
+  return true;
 }
