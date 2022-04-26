@@ -26,11 +26,23 @@ window.onload = function(){
 
 function signUp(event){
   event.preventDefault();
-  reviewFirstName();
-  reviewLastName();
-  alert("SignIN")
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value; 
+  var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+  if(!validateEmail.test(email)) {
+    document.getElementById('wrong-email');
   }
-
+  var validatePassword = reviewPassword();
+  var validateFirstName = reviewFirstName();
+  var validateLastName = reviewLastName();
+  var validate = reviewDate();
+  if(email.length > 0 && password.length > 0 && validatePassword == true && validateEmail == true){
+    return  window.confirm('Valid User');
+  }else{
+    reviewPassword() 
+    reviewEmail()
+  }
+}
 function clearFirstName(){
   var name = document.getElementById('first-name');
   document.getElementById('wrong-first-name').textContent=' ';
