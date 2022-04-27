@@ -119,3 +119,5 @@ This week a lot of code had to be made in order to validate the forms of log in 
 are positionated there and want to get back to index, you can click on the "homepage" button of the sidebar. 
 Many functions were created to achieve the goals, specially in the employee-signup.js file, because of the amount of fields. The logic was combined with the use of events.
 Some notes in the code were made so I could remember in the future some of the things I made to resolve this problematic.
+
+By: María Ana Marraccini.
