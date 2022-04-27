@@ -112,3 +112,10 @@ By: Maria Ana Marraccini.
 # LINK: 
 
 https://mariaanamarraccini.github.io/BaSP-M2022-Etapa-1/Semana-06/views/index
+
+## Javascript and DOM.
+
+This week a lot of code had to be made in order to validate the forms of log in and sign up. To achieve this goal, two files of javascript were made and the repository was reestructured: The folder of HTML files includes the index, which is no longer outside the rest of the folders, and it is next to the employee-signup.html and the login.html. The css of the rest of the HTML files was made, and all the pages were linked with each other. The sidebar has a button for the redirection of log-in and employee-signup pages. If you
+are positionated there and want to get back to index, you can click on the "homepage" button of the sidebar. 
+Many functions were created to achieve the goals, specially in the employee-signup.js file, because of the amount of fields. The logic was combined with the use of events.
+Some notes in the code were made so I could remember in the future some of the things I made to resolve this problematic.
