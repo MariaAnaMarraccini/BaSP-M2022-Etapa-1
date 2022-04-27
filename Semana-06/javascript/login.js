@@ -32,12 +32,7 @@ function logIn(event) {
   if(email.length > 0 && password.length > 0 && validatePassword == true && validateEmail.test(email) == true){
     
     return  window.confirm(email + ' valid user detected with password: '+ password);
-  /*}else{
-    reviewPassword() 
-    reviewEmail()
-  }*/
 }
-
 }
 function clearPassword(){
   var password = document.getElementById('password'); 
