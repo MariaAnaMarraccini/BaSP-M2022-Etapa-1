@@ -64,20 +64,6 @@ function signUp(event){
     var repeatPassword = document.getElementById('repeat-password').value;
     return  window.confirm('New User '+ name + ' ' + lastname + ' ' + document_number + ' '+ date_birth + ' ' + 
     adress + ' ' + city + ' ' + postCode + ' ' + email + ' ' + password);
-    
-    /*
-  }else{
-    reviewFirstName();
-    reviewLastName();
-    reviewDocument();
-    reviewDate();
-    reviewAdress();
-    reviewCity();
-    reviewPostCode();
-    reviewPhone();
-    reviewPassword();
-    reviewRepeatPassword(); 
-    reviewEmail();*/
   }
 }
 function clearFirstName(){
