@@ -85,6 +85,35 @@ function signUp(event){
     return  window.confirm('New User '+ name + ' ' + lastname + ' ' + document_number + ' '+ date_birth + ' ' + 
     adress + ' ' + city + ' ' + postCode + ' ' + email + ' ' + password);
   }
+  let params = {
+    'name': name,
+    'lastname': lastname,
+    'document_number': document_number,
+    'date_birth': date_birth,
+    'phone_number': phone_number,
+    'adress': adress,
+    'city': city,
+    'postCode': postCode,
+    'email': email,
+    'password': password,
+    'repeatPassword': repeatPassword,
+  };
+  let query = Object.keys(params)
+               .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
+               .join('&');
+   let url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?' + query;
+  fetch(url)
+  .then(data => { //To get the information of the fetch.
+    console.log(data)
+    if(data.status == 200){
+      //Save data in localstorage
+      localStorage.setItem('Email', JSON.stringify(email))
+      localStorage.setItem('Password', JSON.stringify(password))
+      return  window.confirm(email + ' valid user detected with password: '+ password);
+    }else{
+      return alert(data.status + ' ' + data.statusText)
+    }
+  })
 }
 function clearFirstName(){
   var name = document.getElementById('first-name');
@@ -179,7 +208,6 @@ function reviewDate(){
   if(calculateAge < 18){
     error = true;
   }
-  
   if(date.toString() == 'Invalid Date'){
     error = true;
   }

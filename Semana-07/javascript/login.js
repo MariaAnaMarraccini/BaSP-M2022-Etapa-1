@@ -31,14 +31,35 @@ function logIn(event){
   if(email.length > 0 && password.length > 0 && validatePassword == true && validateEmail.test(email) == true){
     //Using FETCH.
     let params = {
-      "email": email,
-      "password": password,
+      'email': email,
+      'password': password,
     };
     let query = Object.keys(params)
                  .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
                  .join('&');
      let url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?' + query;
     fetch(url)
+    .then(function (response){
+      console.log(response)
+      return response.json()
+      })
+      .then(function (jsonResponse){
+      console.log("Data", jsonResponse)
+      if (jsonResponse.success){
+      console.log("Good")
+      localStorage.setItem('Email', JSON.stringify(email));
+      localStorage.setItem('Password', JSON.stringify(password));
+      return window.confirm(email + ' valid user detected with password: ' + password);
+    //return jsonResponse
+      } else {
+      //throw jsonResponse
+      return alert(jsonResponse.msg);
+      }
+      })
+      .catch(function (error){
+      console.warn('Error', error)
+      })
+    /*
     .then(data => { //To get the information of the fetch.
       console.log(data)
       if(data.status == 200){
@@ -50,6 +71,7 @@ function logIn(event){
         return alert(data.status + ' ' + data.statusText)
       }
     })
+    */
 }else if(validatePassword == false || password.length < 8){
   window.confirm('The password is not valid')
   }
