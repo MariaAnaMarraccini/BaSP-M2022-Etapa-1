@@ -23,7 +23,6 @@ window.onload = function(){
     document.getElementById('repeat-password').addEventListener('focus',clearRepeatPassword);
     document.getElementById('send').addEventListener('click',signUp);
   }
-
 function signUp(event){
   event.preventDefault();
   var error = false;
@@ -31,25 +30,46 @@ function signUp(event){
   var password = document.getElementById('password').value;
   var repeatPassword = document.getElementById('repeat-password').value;
   var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
-  if(!validateEmail.test(email)) {
+  if(!validateEmail.test(email)){
     document.getElementById('wrong-email');
     error = true;
   }
-  var validatePassword = reviewPassword() == false ? error = true : ''; //Ternary conditional to simplificate
-  var validateRepeatPassword = reviewRepeatPassword() == false ? error = true : '';
+  if (reviewPassword() == false){
+    error = true;
+  } 
+  if (reviewRepeatPassword() == false){
+    error = true;
+  }
   // Compare the passwords
   if(password !== repeatPassword){
     error = true;
     document.getElementById('wrong-repeat-password').textContent='The password is not valid';
   }
-  var validateFirstName = reviewFirstName() == false ? error = true : '';
-  var validateLastName = reviewLastName() == false ? error = true : '';
-  var validateDate = reviewDate() == false ? error = true : '';
-  var validateDocument = reviewDocument() == false ? error = true : '';
-  var validatePhone = reviewPhone() == false ? error = true : '';
-  var validateCity = reviewCity() == false ? error = true : '';
-  var validateAdress = reviewAdress() == false ? error = true : '';
-  var validatePostCode = reviewPostCode() == false ? error = true : '';
+  // Validations without ternary.
+  if(reviewFirstName() == false){ 
+    error = true;
+  }
+  if(reviewLastName() == false){
+    error = true;
+  }
+  if(reviewDate() == false){
+    error = true;
+  }
+  if(reviewDocument() == false){
+    error = true;
+  }
+  if(reviewPhone() == false){
+    error = true;
+  }
+  if(reviewCity() == false){
+    error = true;
+  }
+  if(reviewAdress() == false){
+    error = true;
+  }
+  if(reviewPostCode() == false){
+    error = true;
+  }
   if(error == false){
     var name = document.getElementById('first-name').value;
     var lastname = document.getElementById('last-name').value;
