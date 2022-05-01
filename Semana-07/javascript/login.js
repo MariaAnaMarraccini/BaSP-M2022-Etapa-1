@@ -30,15 +30,7 @@ function logIn(event){
   var validatePassword = reviewPassword();
   if(email.length > 0 && password.length > 0 && validatePassword == true && validateEmail.test(email) == true){
     //Using FETCH.
-    let params = {
-      'email': email,
-      'password': password,
-    };
-    let query = Object.keys(params)
-                 .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
-                 .join('&');
-     let url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?' + query;
-    fetch(url)
+    fetch(`https://basp-m2022-api-rest-server.herokuapp.com/login?email=${email}&password=${password}`)
     .then(function (response){
       console.log(response)
       return response.json()
@@ -50,7 +42,7 @@ function logIn(event){
       localStorage.setItem('Email', JSON.stringify(email));
       localStorage.setItem('Password', JSON.stringify(password));
       return window.confirm(email + ' valid user detected with password: ' + password);
-    //return jsonResponse
+      //return jsonResponse
       } else {
       //throw jsonResponse
       return alert(jsonResponse.msg);
@@ -59,19 +51,6 @@ function logIn(event){
       .catch(function (error){
       console.warn('Error', error)
       })
-    /*
-    .then(data => { //To get the information of the fetch.
-      console.log(data)
-      if(data.status == 200){
-        //Save data in localstorage
-        localStorage.setItem('Email', JSON.stringify(email))
-        localStorage.setItem('Password', JSON.stringify(password))
-        return  window.confirm(email + ' valid user detected with password: '+ password);
-      }else{
-        return alert(data.status + ' ' + data.statusText)
-      }
-    })
-    */
 }else if(validatePassword == false || password.length < 8){
   window.confirm('The password is not valid')
   }
