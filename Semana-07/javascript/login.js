@@ -18,18 +18,18 @@ function reviewEmail(){
     document.getElementById('wrong-email').textContent='The email is not valid';
   }
 }
-function logIn(event) {
+function logIn(event){
   event.preventDefault();
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value; 
   var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
-  
   if(!validateEmail.test(email)) {
-    document.getElementById('wrong-email');
+    document.getElementById('wrong-email').textContent='The email is not valid';
+    window.confirm('The email is not valid')
   }
   var validatePassword = reviewPassword();
-  
   if(email.length > 0 && password.length > 0 && validatePassword == true && validateEmail.test(email) == true){
+    //Using FETCH.
     let params = {
       "email": email,
       "password": password,
@@ -39,16 +39,20 @@ function logIn(event) {
                  .join('&');
      let url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?' + query;
     fetch(url)
-    .then(data => {
+    .then(data => { //To get the information of the fetch.
       console.log(data)
       if(data.status == 200){
+        //Save data in localstorage
+        localStorage.setItem('Email', JSON.stringify(email))
+        localStorage.setItem('Password', JSON.stringify(password))
         return  window.confirm(email + ' valid user detected with password: '+ password);
+      }else{
+        return alert(data.status + ' ' + data.statusText)
       }
-    }) 
-    //Save data in localstorage
-    localStorage.setItem('Email', JSON.stringify(email))
-    localStorage.setItem('Password', JSON.stringify(password))
-}
+    })
+}else if(validatePassword == false || password.length < 8){
+  window.confirm('The password is not valid')
+  }
 }
 function clearPassword(){
   var password = document.getElementById('password'); 
@@ -74,7 +78,7 @@ function reviewPassword(){
       isNumber = true;
     }
     if (findLetter == -1 && findNumber == -1) {
-      error = true; //the loop didn't find a letter or a number
+      error = true; //the loop didn't find a letter or a number (it found another character)
       break;
     }
   }
