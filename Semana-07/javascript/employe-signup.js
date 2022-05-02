@@ -154,33 +154,32 @@ function signUp(event){
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     var repeatPassword = document.getElementById('repeat-password').value;
-    //return  window.confirm('New User '+ name + ' ' + lastname + ' ' + document_number + ' '+ date_birth + ' ' + 
-    //adress + ' ' + city + ' ' + postCode + ' ' + email + ' ' + password);
-  fetch(`https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${name}&lastName=${lastname}&dni=${document_number}&dob=${date_to_send}&phone=${phone_number}&address=${adress}&city=${city}&zip=${postCode}&email=${email}&password=${password}&repeatpass=${repeatPassword}`)
-  .then(function (response){
-    console.log(response);
-    return response.json()
-    })
-  .then(function (jsonResponse){
-    console.log("Data", jsonResponse)
-    if (jsonResponse.success){
-    localStorage.setItem('Name', JSON.stringify(name));
-    localStorage.setItem('Last Name', JSON.stringify(lastname));
-    localStorage.setItem('D.N.I', JSON.stringify(document_number));
-    localStorage.setItem('Date of Birth', JSON.stringify(date_to_send));
-    localStorage.setItem('Phone', JSON.stringify(phone_number));
-    localStorage.setItem('Adress', JSON.stringify(adress));
-    localStorage.setItem('City', JSON.stringify(city));
-    localStorage.setItem('Post Code', JSON.stringify(postCode));
-    localStorage.setItem('Email', JSON.stringify(email));
-    localStorage.setItem('Password', JSON.stringify(password));
-    localStorage.setItem('Repeat the Password', JSON.stringify(repeatPassword));
-    //return window.confirm(email + ' valid user detected with password: ' + password);
-    }else{
+    fetch(`https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${name}&lastName=${lastname}&dni=${document_number}&dob=${date_to_send}&phone=${phone_number}&address=${adress}&city=${city}&zip=${postCode}&email=${email}&password=${password}&repeatpass=${repeatPassword}`)
+    .then(function (response){
+      console.log(response);
+      return response.json()
+      })
+    .then(function (jsonResponse){
+      console.log("Data", jsonResponse)
+      if (jsonResponse.success){
+        localStorage.setItem('Name', JSON.stringify(name));
+        localStorage.setItem('Last Name', JSON.stringify(lastname));
+        localStorage.setItem('D.N.I', JSON.stringify(document_number));
+        localStorage.setItem('Date of Birth', JSON.stringify(date_to_send));
+        localStorage.setItem('Phone', JSON.stringify(phone_number));
+        localStorage.setItem('Adress', JSON.stringify(adress));
+        localStorage.setItem('City', JSON.stringify(city));
+        localStorage.setItem('Post Code', JSON.stringify(postCode));
+        localStorage.setItem('Email', JSON.stringify(email));
+        localStorage.setItem('Password', JSON.stringify(password));
+        localStorage.setItem('Repeat the Password', JSON.stringify(repeatPassword));
+        window.confirm('New User '+ name + ' ' + lastname + ' ' + document_number + ' '+ date_birth + ' ' + 
+        adress + ' ' + city + ' ' + postCode + ' ' + email + ' ' + password);
+      }else{
     //throw jsonResponse
-      for(var i=0;i<jsonResponse.errors.length; i++){
-        alert(jsonResponse.errors[i].msg);
-    }
+        for(var i=0;i<jsonResponse.errors.length; i++){
+          alert(jsonResponse.errors[i].msg);
+        }
       return false;
     }
   })
