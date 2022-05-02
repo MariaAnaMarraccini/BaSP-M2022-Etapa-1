@@ -1,28 +1,98 @@
+
 window.onload = function(){
-    document.getElementById('first-name').addEventListener('blur',reviewFirstName);
-    document.getElementById('first-name').addEventListener('focus',clearFirstName);
-    document.getElementById('last-name').addEventListener('blur',reviewLastName);
-    document.getElementById('last-name').addEventListener('focus',clearLastName);
-    document.getElementById('document').addEventListener('blur',reviewDocument);
-    document.getElementById('document').addEventListener('focus',clearDocument);
-    document.getElementById('date').addEventListener('blur',reviewDate);
-    document.getElementById('date').addEventListener('focus',clearDate);
-    document.getElementById('phone').addEventListener('blur',reviewPhone);
-    document.getElementById('phone').addEventListener('focus',clearPhone);
-    document.getElementById('adress').addEventListener('blur',reviewAdress);
-    document.getElementById('adress').addEventListener('focus',clearAdress);
-    document.getElementById('city').addEventListener('blur',reviewCity);
-    document.getElementById('city').addEventListener('focus',clearCity);
-    document.getElementById('post-code').addEventListener('blur',reviewPostCode);
-    document.getElementById('post-code').addEventListener('focus',clearPostCode);
-    document.getElementById('email').addEventListener('blur',reviewEmail);
-    document.getElementById('email').addEventListener('focus',clearEmail);
-    document.getElementById('password').addEventListener('blur',reviewPassword);
-    document.getElementById('password').addEventListener('focus',clearPassword);
-    document.getElementById('repeat-password').addEventListener('blur',reviewRepeatPassword);
-    document.getElementById('repeat-password').addEventListener('focus',clearRepeatPassword);
-    document.getElementById('send').addEventListener('click',signUp);
+  document.getElementById('first-name').addEventListener('blur',reviewFirstName);
+  document.getElementById('first-name').addEventListener('focus',clearFirstName);
+  document.getElementById('last-name').addEventListener('blur',reviewLastName);
+  document.getElementById('last-name').addEventListener('focus',clearLastName);
+  document.getElementById('document').addEventListener('blur',reviewDocument);
+  document.getElementById('document').addEventListener('focus',clearDocument);
+  document.getElementById('date').addEventListener('blur',reviewDate);
+  document.getElementById('date').addEventListener('focus',clearDate);
+  document.getElementById('phone').addEventListener('blur',reviewPhone);
+  document.getElementById('phone').addEventListener('focus',clearPhone);
+  document.getElementById('adress').addEventListener('blur',reviewAdress);
+  document.getElementById('adress').addEventListener('focus',clearAdress);
+  document.getElementById('city').addEventListener('blur',reviewCity);
+  document.getElementById('city').addEventListener('focus',clearCity);
+  document.getElementById('post-code').addEventListener('blur',reviewPostCode);
+  document.getElementById('post-code').addEventListener('focus',clearPostCode);
+  document.getElementById('email').addEventListener('blur',reviewEmail);
+  document.getElementById('email').addEventListener('focus',clearEmail);
+  document.getElementById('password').addEventListener('blur',reviewPassword);
+  document.getElementById('password').addEventListener('focus',clearPassword);
+  document.getElementById('repeat-password').addEventListener('blur',reviewRepeatPassword);
+  document.getElementById('repeat-password').addEventListener('focus',clearRepeatPassword);
+  document.getElementById('send').addEventListener('click',signUp);
+  //Putting the values saved in the localStorage in the form.
+  var firstName = localStorage.getItem('Name');
+  console.log(firstName)
+  if(firstName.length > 0){
+    var field = document.getElementById('first-name').value= JSON.parse(firstName);
+    console.log(field)
   }
+  var lastName = localStorage.getItem('Last Name');
+  console.log(lastName)
+  if(lastName.length > 0){
+    var field = document.getElementById('last-name').value= JSON.parse(lastName);
+    console.log(field)
+  }
+  var dni = localStorage.getItem('D.N.I');
+  console.log(dni);
+  if(dni.length > 0){
+    var field = document.getElementById('document').value= JSON.parse(dni);
+    console.log(field);
+  }
+  var birth = localStorage.getItem('Date of Birth');
+  console.log(birth);
+  if(birth.length > 0){
+    var date_birth_format = new Date(JSON.parse(birth));
+    var date_to_send = date_birth_format.getFullYear()+ '-'+ ("0" + (date_birth_format.getMonth() + 1)).slice(-2) +'-'+ ("0" + date_birth_format.getDate()).slice(-2);
+    var field = document.getElementById('date').value= date_to_send;
+    console.log(field);
+  }
+  var phoneNumber = localStorage.getItem('Phone');
+  console.log(phoneNumber);
+  if(phoneNumber.length > 0){
+    var field = document.getElementById('phone').value= JSON.parse(phoneNumber);
+    console.log(field);
+  }
+  var adress = localStorage.getItem('Adress');
+  console.log(adress);
+  if(adress.length > 0){
+    var field = document.getElementById('adress').value= JSON.parse(adress);
+    console.log(field);
+  }
+  var city = localStorage.getItem('City');
+  console.log(city);
+  if(city.length > 0){
+    var field = document.getElementById('city').value= JSON.parse(city);
+    console.log(field);
+  }
+  var postCode = localStorage.getItem('Post Code');
+  console.log(postCode);
+  if(postCode.length > 0){
+    var field = document.getElementById('post-code').value= JSON.parse(postCode);
+    console.log(field);
+  }
+  var email = localStorage.getItem('Email');
+  console.log(email);
+  if(email.length > 0){
+    var field = document.getElementById('email').value= JSON.parse(email);
+    console.log(field);
+  }
+  var password = localStorage.getItem('Password');
+  console.log(password);
+  if(password.length > 0){
+    var field = document.getElementById('password').value= JSON.parse(password);
+    console.log(field);
+  }
+  var repeatPass = localStorage.getItem('Repeat the Password');
+  console.log(repeatPass);
+  if(repeatPass.length > 0){
+    var field = document.getElementById('repeat-password').value= JSON.parse(repeatPass);
+    console.log(field);
+  }
+}
 function signUp(event){
   event.preventDefault();
   var error = false;
@@ -75,6 +145,8 @@ function signUp(event){
     var lastname = document.getElementById('last-name').value;
     var document_number = document.getElementById('document').value;
     var date_birth = document.getElementById('date'). value;
+    var date_birth_format = new Date(date_birth);
+    var date_to_send = ("0" + (date_birth_format.getMonth() + 1)).slice(-2) +'/'+("0" + date_birth_format.getDate()).slice(-2) + '/'+date_birth_format.getFullYear();
     var phone_number = document.getElementById('phone').value;
     var adress = document.getElementById('adress').value;
     var city = document.getElementById('city').value;
@@ -82,38 +154,37 @@ function signUp(event){
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     var repeatPassword = document.getElementById('repeat-password').value;
-    return  window.confirm('New User '+ name + ' ' + lastname + ' ' + document_number + ' '+ date_birth + ' ' + 
-    adress + ' ' + city + ' ' + postCode + ' ' + email + ' ' + password);
-  }
-  let params = {
-    'name': name,
-    'lastname': lastname,
-    'document_number': document_number,
-    'date_birth': date_birth,
-    'phone_number': phone_number,
-    'adress': adress,
-    'city': city,
-    'postCode': postCode,
-    'email': email,
-    'password': password,
-    'repeatPassword': repeatPassword,
-  };
-  let query = Object.keys(params)
-               .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
-               .join('&');
-   let url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?' + query;
-  fetch(url)
-  .then(data => { //To get the information of the fetch.
-    console.log(data)
-    if(data.status == 200){
-      //Save data in localstorage
-      localStorage.setItem('Email', JSON.stringify(email))
-      localStorage.setItem('Password', JSON.stringify(password))
-      return  window.confirm(email + ' valid user detected with password: '+ password);
+    //return  window.confirm('New User '+ name + ' ' + lastname + ' ' + document_number + ' '+ date_birth + ' ' + 
+    //adress + ' ' + city + ' ' + postCode + ' ' + email + ' ' + password);
+  fetch(`https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${name}&lastName=${lastname}&dni=${document_number}&dob=${date_to_send}&phone=${phone_number}&address=${adress}&city=${city}&zip=${postCode}&email=${email}&password=${password}&repeatpass=${repeatPassword}`)
+  .then(function (response){
+    console.log(response);
+    return response.json()
+    })
+  .then(function (jsonResponse){
+    console.log("Data", jsonResponse)
+    if (jsonResponse.success){
+    localStorage.setItem('Name', JSON.stringify(name));
+    localStorage.setItem('Last Name', JSON.stringify(lastname));
+    localStorage.setItem('D.N.I', JSON.stringify(document_number));
+    localStorage.setItem('Date of Birth', JSON.stringify(date_to_send));
+    localStorage.setItem('Phone', JSON.stringify(phone_number));
+    localStorage.setItem('Adress', JSON.stringify(adress));
+    localStorage.setItem('City', JSON.stringify(city));
+    localStorage.setItem('Post Code', JSON.stringify(postCode));
+    localStorage.setItem('Email', JSON.stringify(email));
+    localStorage.setItem('Password', JSON.stringify(password));
+    localStorage.setItem('Repeat the Password', JSON.stringify(repeatPassword));
+    //return window.confirm(email + ' valid user detected with password: ' + password);
     }else{
-      return alert(data.status + ' ' + data.statusText)
+    //throw jsonResponse
+      for(var i=0;i<jsonResponse.errors.length; i++){
+        alert(jsonResponse.errors[i].msg);
+    }
+      return false;
     }
   })
+}
 }
 function clearFirstName(){
   var name = document.getElementById('first-name');
@@ -263,11 +334,9 @@ function reviewAdress(){
     }
   }
   var findSpace = adress.indexOf(space);
-  console.log(findSpace, adress.length)
     if(findSpace == -1 || findSpace ==  adress.length -1){ //If there is a space at the end, the index will be equal to the lenght of the adress - 1
       error = true;
     }
-    console.log(findSpace)
   if(error == true){
     document.getElementById('wrong-adress').textContent='The Adress is not valid';
     return false;
