@@ -26,72 +26,105 @@ window.onload = function(){
   //Putting the values saved in the localStorage in the form.
   var firstName = localStorage.getItem('Name');
   console.log(firstName)
-  if(firstName.length > 0){
-    var field = document.getElementById('first-name').value= JSON.parse(firstName);
-    console.log(field)
+  if(firstName != null){
+    if(firstName.length > 0 ){
+      var field = document.getElementById('first-name').value= JSON.parse(firstName);
+      console.log(field)
+    }
   }
+  
   var lastName = localStorage.getItem('Last Name');
   console.log(lastName)
-  if(lastName.length > 0){
-    var field = document.getElementById('last-name').value= JSON.parse(lastName);
-    console.log(field)
+  if(lastName != null){
+    if(lastName.length > 0){
+      var field = document.getElementById('last-name').value= JSON.parse(lastName);
+      console.log(field)
+    }
   }
+  
   var dni = localStorage.getItem('D.N.I');
   console.log(dni);
-  if(dni.length > 0){
-    var field = document.getElementById('document').value= JSON.parse(dni);
-    console.log(field);
+  if(dni != null){
+    if(dni.length > 0){
+      var field = document.getElementById('document').value= JSON.parse(dni);
+      console.log(field);
+    }
   }
+  
   var birth = localStorage.getItem('Date of Birth');
   console.log(birth);
-  if(birth.length > 0){
-    var date_birth_format = new Date(JSON.parse(birth));
-    var date_to_send = date_birth_format.getFullYear()+ '-'+ ("0" + (date_birth_format.getMonth() + 1)).slice(-2) +'-'+ ("0" + date_birth_format.getDate()).slice(-2);
-    var field = document.getElementById('date').value= date_to_send;
-    console.log(field);
+  if(birth != null){
+    if(birth.length > 0){
+      var date_birth_format = new Date(JSON.parse(birth));
+      var date_to_send = date_birth_format.getFullYear()+ '-'+ ("0" + (date_birth_format.getMonth() + 1)).slice(-2) +'-'+ ("0" + date_birth_format.getDate()).slice(-2);
+      var field = document.getElementById('date').value= date_to_send;
+      console.log(field);
+    }
   }
+  
   var phoneNumber = localStorage.getItem('Phone');
   console.log(phoneNumber);
-  if(phoneNumber.length > 0){
-    var field = document.getElementById('phone').value= JSON.parse(phoneNumber);
-    console.log(field);
+  if(phoneNumber != null){
+    if(phoneNumber.length > 0){
+      var field = document.getElementById('phone').value= JSON.parse(phoneNumber);
+      console.log(field);
+    }
   }
+  
   var adress = localStorage.getItem('Adress');
   console.log(adress);
-  if(adress.length > 0){
-    var field = document.getElementById('adress').value= JSON.parse(adress);
-    console.log(field);
+  if(adress != null){
+    if(adress.length > 0){
+      var field = document.getElementById('adress').value= JSON.parse(adress);
+      console.log(field);
+    }
   }
+  
   var city = localStorage.getItem('City');
   console.log(city);
-  if(city.length > 0){
-    var field = document.getElementById('city').value= JSON.parse(city);
-    console.log(field);
+  if(city != null){
+    if(city.length > 0){
+      var field = document.getElementById('city').value= JSON.parse(city);
+      console.log(field);
+    }
   }
+  
   var postCode = localStorage.getItem('Post Code');
   console.log(postCode);
-  if(postCode.length > 0){
-    var field = document.getElementById('post-code').value= JSON.parse(postCode);
-    console.log(field);
+  if(postCode != null){
+    if(postCode.length > 0){
+      var field = document.getElementById('post-code').value= JSON.parse(postCode);
+      console.log(field);
+    }
   }
+  
   var email = localStorage.getItem('Email');
   console.log(email);
-  if(email.length > 0){
-    var field = document.getElementById('email').value= JSON.parse(email);
-    console.log(field);
+  if(email != null){
+    if(email.length > 0){
+      var field = document.getElementById('email').value= JSON.parse(email);
+      console.log(field);
+    }
   }
+  
   var password = localStorage.getItem('Password');
   console.log(password);
-  if(password.length > 0){
-    var field = document.getElementById('password').value= JSON.parse(password);
-    console.log(field);
+  if(password != null){
+    if(password.length > 0){
+      var field = document.getElementById('password').value= JSON.parse(password);
+      console.log(field);
+    }
   }
+  
   var repeatPass = localStorage.getItem('Repeat the Password');
   console.log(repeatPass);
-  if(repeatPass.length > 0){
-    var field = document.getElementById('repeat-password').value= JSON.parse(repeatPass);
-    console.log(field);
+  if(repeatPass != null){
+    if(repeatPass.length > 0){
+      var field = document.getElementById('repeat-password').value= JSON.parse(repeatPass);
+      console.log(field);
+    }
   }
+  
 }
 function signUp(event){
   event.preventDefault();
@@ -198,11 +231,13 @@ function reviewFirstName(){
   var nameToArray = name.split('');
   if(name.length < 3){
     error = true;
+    console.log('Name has less than 3 letters')
   }
   for(var i = 0; i < name.length; i++){
     var findLetter = validateName.indexOf(nameToArray[i]);
     if(findLetter == -1){
     error = true;
+    console.log('Wrong character')
     break;
   }
   }
@@ -225,16 +260,18 @@ function reviewLastName(){
   var nameToArray = lastname.split('');
   if(lastname.length < 3){
     error  = true;
+    console.log('The lastname has less than 3 letters');
   }
   for(var i = 0; i < lastname.length; i++){
     var findLetter = validateName.indexOf(nameToArray[i]);
     if(findLetter == -1){
       error = true;
+      console.log('Wrong character');
       break;
     }
     }
   if(error == true){
-      document.getElementById('wrong-last-name').textContent="The Last Name is not valid";
+      document.getElementById('wrong-last-name').textContent='The Last Name is not valid';
       return false;
   }
   return true;
@@ -250,11 +287,13 @@ function reviewDocument(){
   var documentToArray = document_number.split('');
   if(document_number.length < 8){
     error = true;
+    console.log('The number has less than 8 digits')
   }
   for(var i = 0; i < document_number.length; i++){
     var number_position = parseInt(documentToArray[i]);
     if(isNaN(number_position) == true){
       error = true;
+      console.log('Wrong character')
       break;
     }
   }
@@ -277,8 +316,10 @@ function reviewDate(){
   var calculateAge = today.getFullYear() - date.getFullYear();
   if(calculateAge < 18){
     error = true;
+    console.log('The person is not an adult');
   }
   if(date.toString() == 'Invalid Date'){
+    console.log('Invalid date');
     error = true;
   }
   if(error == true){
@@ -298,11 +339,13 @@ function reviewPhone(){
   var phoneToArray = phone_number.split('');
   if(phone_number.length != 10 ){
     error = true;
+    console.log('The phone has more or lees than 10 digits');
   }
   for(var i = 0; i < phone_number.length; i++){
     var number_position = parseInt(phoneToArray[i]);
     if(isNaN(number_position) == true){
       error = true;
+      console.log('Wrong character');
       break;
     }
   }
@@ -325,16 +368,19 @@ function reviewAdress(){
   var adressToArray = adress.split('');
   if(adress.length < 5){
     error = true;
+    console.log('The Adress has less than 5 characters');
   }
   for(var i = 0; i < adress.length; i++) {
     var findInvalidChar = illegalChars.indexOf(adressToArray[i]);
     if(findInvalidChar != -1){
     error = true;
+    console.log('Wrong character')
     }
   }
   var findSpace = adress.indexOf(space);
     if(findSpace == -1 || findSpace ==  adress.length -1){ //If there is a space at the end, the index will be equal to the lenght of the adress - 1
       error = true;
+      console.log('The adress has not space in the middle');
     }
   if(error == true){
     document.getElementById('wrong-adress').textContent='The Adress is not valid';
@@ -351,15 +397,27 @@ function reviewCity(){
   var city = document.getElementById('city').value;
   var validateCityLetter = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
   'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
+  var validateCityNumber = ['1','2','3','4','5','6','7','8','9', '0'];
   var cityToArray = city.split('');
   var error = false;
+  isNumber = false;
+  isLetter = false;
   if(city.length < 3){
     error = true;
+    console.log('The city has less than 3 letters');
   } 
   for (var i=0; i < city.length; i++){
     var findLetter = validateCityLetter.indexOf(cityToArray[i]);
-    if (findLetter == -1 ){
-      error = true; 
+    var findNumber = validateCityNumber.indexOf(cityToArray[i]);
+    if(findLetter != -1){
+      isLetter = true;
+      }
+    if(findNumber != -1){
+      isNumber = true;
+    }
+    if (findLetter == -1 && findNumber == -1) {
+      error = true; //the loop didn't find a letter or a number
+      console.log('Wrong character');
       break;
     }
   }
@@ -380,11 +438,13 @@ function reviewPostCode(){
   var phoneToArray = postCode.split('');
   if(postCode.length < 4 || postCode.length > 5){
     error = true;
+    console.log('The code has less than 4 characters and more than 5 characters')
   }
   for(var i = 0; i < postCode.length; i++){
     var number_position = parseInt(phoneToArray[i]);
     if(isNaN(number_position) == true){
       error = true;
+      console.log('Wrong character')
       break;
     }
   }
@@ -403,8 +463,9 @@ function clearEmail(){
 function reviewEmail(){
   var email = document.getElementById('email').value;
   var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
-  if(!validateEmail.test(email)) { // I've put the "!" in order to validate if the condition is FALSE
+  if(!validateEmail.test(email)) { //I've put the "!" in order to validate if the condition is FALSE
     document.getElementById('wrong-email').textContent='The email is not valid'
+    console.log('Wrong email')
   }
 }
 function clearPassword(){
@@ -432,11 +493,13 @@ function reviewPassword(){
     }
     if (findLetter == -1 && findNumber == -1) {
       error = true; //the loop didn't find a letter or a number
+      console.log('Wrong character');
       break;
     }
   }
   if(password.length < 8){
     error = true;
+    console.log('The password has less than 8 letters');
   }
   if (error == true){
     document.getElementById('wrong-password').textContent='The password is not valid';
@@ -472,11 +535,13 @@ function reviewRepeatPassword(){
     }
     if (findLetter == -1 && findNumber == -1) {
       error = true; //the loop didn't find a letter or a number
+      console.log('Wrong character');
       break;
     }
   }
   if(password.length < 8){
     error = true;
+    console.log('The password has less than 8 letters');
   }
   if (error == true){
     document.getElementById('wrong-repeat-password').textContent='The password is not valid';
