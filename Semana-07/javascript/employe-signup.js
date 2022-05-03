@@ -53,7 +53,8 @@ window.onload = function(){
   if(birth != null){
     if(birth.length > 0){
       var date_birth_format = new Date(JSON.parse(birth));
-      var date_to_send = date_birth_format.getFullYear()+ '-'+ ("0" + (date_birth_format.getMonth() + 1)).slice(-2) +'-'+ ("0" + date_birth_format.getDate()).slice(-2);
+      var date_to_send = date_birth_format.getFullYear()+ '-'+ ("0" + (date_birth_format.getMonth() + 1)).slice(-2) 
+      +'-'+ ("0" + date_birth_format.getDate()).slice(-2);
       var field = document.getElementById('date').value= date_to_send;
       console.log(field);
     }
