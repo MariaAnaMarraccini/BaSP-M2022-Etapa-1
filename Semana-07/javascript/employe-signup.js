@@ -32,7 +32,6 @@ window.onload = function(){
       console.log(field)
     }
   }
-  
   var lastName = localStorage.getItem('Last Name');
   console.log(lastName)
   if(lastName != null){
@@ -41,7 +40,6 @@ window.onload = function(){
       console.log(field)
     }
   }
-  
   var dni = localStorage.getItem('D.N.I');
   console.log(dni);
   if(dni != null){
@@ -50,7 +48,6 @@ window.onload = function(){
       console.log(field);
     }
   }
-  
   var birth = localStorage.getItem('Date of Birth');
   console.log(birth);
   if(birth != null){
@@ -61,7 +58,6 @@ window.onload = function(){
       console.log(field);
     }
   }
-  
   var phoneNumber = localStorage.getItem('Phone');
   console.log(phoneNumber);
   if(phoneNumber != null){
@@ -70,7 +66,6 @@ window.onload = function(){
       console.log(field);
     }
   }
-  
   var adress = localStorage.getItem('Adress');
   console.log(adress);
   if(adress != null){
@@ -79,7 +74,6 @@ window.onload = function(){
       console.log(field);
     }
   }
-  
   var city = localStorage.getItem('City');
   console.log(city);
   if(city != null){
@@ -88,7 +82,6 @@ window.onload = function(){
       console.log(field);
     }
   }
-  
   var postCode = localStorage.getItem('Post Code');
   console.log(postCode);
   if(postCode != null){
@@ -97,7 +90,6 @@ window.onload = function(){
       console.log(field);
     }
   }
-  
   var email = localStorage.getItem('Email');
   console.log(email);
   if(email != null){
@@ -106,7 +98,6 @@ window.onload = function(){
       console.log(field);
     }
   }
-  
   var password = localStorage.getItem('Password');
   console.log(password);
   if(password != null){
@@ -115,7 +106,6 @@ window.onload = function(){
       console.log(field);
     }
   }
-  
   var repeatPass = localStorage.getItem('Repeat the Password');
   console.log(repeatPass);
   if(repeatPass != null){
@@ -124,8 +114,10 @@ window.onload = function(){
       console.log(field);
     }
   }
-  
 }
+const validateLetters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
+const validateNumbers = ['1','2','3','4','5','6','7','8','9', '0'];
 function signUp(event){
   event.preventDefault();
   var error = false;
@@ -226,15 +218,13 @@ function clearFirstName(){
 function reviewFirstName(){
   var name = document.getElementById('first-name').value;
   var error = false;
-  var validateName = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
-  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
   var nameToArray = name.split('');
   if(name.length < 3){
     error = true;
     console.log('Name has less than 3 letters')
   }
   for(var i = 0; i < name.length; i++){
-    var findLetter = validateName.indexOf(nameToArray[i]);
+    var findLetter = validateLetters.indexOf(nameToArray[i]);
     if(findLetter == -1){
     error = true;
     console.log('Wrong character')
@@ -255,15 +245,13 @@ function clearLastName(){
 function reviewLastName(){
   var lastname = document.getElementById('last-name').value;
   var error = false;
-  var validateName = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
-  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
   var nameToArray = lastname.split('');
   if(lastname.length < 3){
     error  = true;
     console.log('The lastname has less than 3 letters');
   }
   for(var i = 0; i < lastname.length; i++){
-    var findLetter = validateName.indexOf(nameToArray[i]);
+    var findLetter = validateLetters.indexOf(nameToArray[i]);
     if(findLetter == -1){
       error = true;
       console.log('Wrong character');
@@ -395,9 +383,6 @@ function clearCity(){
 }
 function reviewCity(){
   var city = document.getElementById('city').value;
-  var validateCityLetter = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
-  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
-  var validateCityNumber = ['1','2','3','4','5','6','7','8','9', '0'];
   var cityToArray = city.split('');
   var error = false;
   isNumber = false;
@@ -407,8 +392,8 @@ function reviewCity(){
     console.log('The city has less than 3 letters');
   } 
   for (var i=0; i < city.length; i++){
-    var findLetter = validateCityLetter.indexOf(cityToArray[i]);
-    var findNumber = validateCityNumber.indexOf(cityToArray[i]);
+    var findLetter = validateLetters.indexOf(cityToArray[i]);
+    var findNumber = validateNumbers.indexOf(cityToArray[i]);
     if(findLetter != -1){
       isLetter = true;
       }
@@ -475,16 +460,13 @@ function clearPassword(){
 }
 function reviewPassword(){
   var password = document.getElementById('password').value;
-  var validatePassword = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
-  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
-  var validatePassword2 = ['1','2','3','4','5','6','7','8','9', '0'];
   var passwordToArray = password.split(''); 
   var error = false; //This is in order to display the alert or not. We presume that the password is correct.
   var isLetter = false;
   var isNumber = false;
   for (var i=0; i < password.length; i++){
-    var findLetter = validatePassword.indexOf(passwordToArray[i]);
-    var findNumber = validatePassword2.indexOf(passwordToArray[i]);
+    var findLetter = validateLetters.indexOf(passwordToArray[i]);
+    var findNumber = validateNumbers.indexOf(passwordToArray[i]);
     if(findLetter != -1){
         isLetter = true;
     }
@@ -517,16 +499,13 @@ function clearRepeatPassword(){
 }
 function reviewRepeatPassword(){
   var password = document.getElementById('repeat-password').value;
-  var validatePassword = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
-  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
-  var validatePassword2 = ['1','2','3','4','5','6','7','8','9', '0'];
   var passwordToArray = password.split(''); 
   var error = false; //This is in order to display the alert or not. We presume that the password is correct.
   var isLetter = false;
   var isNumber = false;
   for (var i=0; i < password.length; i++){
-    var findLetter = validatePassword.indexOf(passwordToArray[i]);
-    var findNumber = validatePassword2.indexOf(passwordToArray[i]);
+    var findLetter = validateLetters.indexOf(passwordToArray[i]);
+    var findNumber = validateNumbers.indexOf(passwordToArray[i]);
     if(findLetter != -1){
     isLetter = true;
     }
