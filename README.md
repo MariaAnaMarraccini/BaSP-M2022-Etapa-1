@@ -134,7 +134,7 @@ The main goal of this week was to fully understand the functioning of the fetch 
 API's and localStorage. To achieve this goal I used the same structure as before, but I added code with the FETCH method and
 promises. I made this in each javascript form file (employee-signup and login). The code was made using the format of the planning 
 meeting. In order to do this, I've put the new code in the signUp and logIn functions, so the other validations of the previous week
-were not altered. Some changes had to be made, for example the format of date (the backend solicitates the date as year / month / day;
+were not altered. Some changes had to be made, for example the format of date (by default, the date was required as year / month / day;
 in the other hand the API solicitates it as month / day / year), but this changes were also made in the same function were I called the FETCH method. I also decided to add some new code to the format of the planning, for example a for loop. This loop helps the user 
 to see what is the mistake that he is making in the form. This is viewed through an alert. 
 Some other corrections of the week 06 had also to be made, but I decided to leave them at the end and concentrate my full attention
